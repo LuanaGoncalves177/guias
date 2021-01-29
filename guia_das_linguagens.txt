@@ -1,0 +1,597 @@
+
+----------------------------------------------------------------------------------------------------
+					Guia de HTML
+----------------------------------------------------------------------------------------------------
+	Caracteristicas do HTML
+	
+	É uma linguagem e programação responsável pela criação da estrutura da página
+	Usa tags (marcações) entre <> (abre a tag) </> (fecha a tag)
+	Id vs class 
+	d é o identificador único de uma tag, só usa uma vez 
+	Ex: <img id = “foto-do-joao” >
+	Class é o identificador que pode ser reutilizado quantas vezes for necessária
+	Ex: <img class = “fotos-do-perfil”>
+	Estrutura Básica do HTML 	
+
+			TAGs (etiquetas)
+	TAGs do documento HTML 
+		<html>...</html> - tag para iniciar um documento Html 
+
+		Head(metadados da página para o navegador)
+		<head>...</head> - cabeçalho que recebe os parâmetros para o navegador (dentro de html). 
+			<meta  charset = “UtF-8”> Biblioteca de linguagem ocidental 
+			Title(Título) 
+			<title>...</title> dá título à página no navegador. 
+
+	Body(corpo da página)
+		<body>...</body> - corpo do documento (dentro de html).
+
+	Estrutura básica do HTML
+		<!DOCTYPE html>
+			<html lang="pt-br">
+			<head>
+    				<meta charset="UTF-8">
+    				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    				<title>Documento</title>
+			</head>
+			<body>
+    				Conteudo da página que será exibido para o usuário 
+			</body>
+			</html>
+
+	Main iv para o conteúdo principal 
+		<main> -> conteúdo principal da página</main>
+
+	Header
+		<header>...</header> Cabeçalho da página que fica no body 
+	Links
+		<link rel = "Stylesheet" href = style.css> Adiciona a folha de estilo á página
+		<link rel="preconnect" href="https://fonts.gstatic.com"> Adiciona fontes externa á página. 
+		<link rel = "icon" href = "imagem.png"> -> Adiciona imagens no título da página 
+
+	Adicionar Copyright e outros símbulos 
+		<p class = "copyright">&copy;Copyright 2019</p> paragráfo com o copyright 
+
+	
+	Parágrafos e seus respectivos Atributos 
+		<p>...<p> Adiciona parágrafos 
+			<em>...</em> ênfase ou itálico no parágrafo 
+			<strong>...<strong> Ativa o negrito no parágrafo
+			<sub>...</sub> Adiciona texto abaixo da letra 
+			<sup>...</sup> Adiciona texto acima da letra (potenciação) 
+			<abbr title = “Superior Tribunal de Justiça” >STJ</abbr> Adiciona siglas e ao toque do mouse ostra o seu significado.
+			<p>lorem*2</p> Coloca um texto para criar conte[udo 
+
+	Citações 
+		<cite>...<cite> adiciona citação a página
+
+	Bloquotes Blocos para citações 
+		<blockquote> 
+			<p>pagragrafo da citação</p>
+			cite>autor da citação</cite>
+		</blockquote>
+ 
+	Spans (Não tem semantica e não é parágrafo) 
+		<span>...</span> Coloca texto, fórmulas na página> 
+
+	Estruturadores de páginas 
+		<br> Quebra a linha no navegador>
+		<hr> Adiciona linha ná página>
+ 
+	Títulos, Subtitulos e Tópicos 
+		<h1>...</h1> Título principal da página só existe uma Tag 
+		<h2>...</h2> título secundário da página  
+		<h3>...</h3> Tópico da página
+		<h4>...</h4> Tópico 
+		<h5>...</h5> penúltimo tópico 
+		<h6>...</h6> último tópico. 
+
+	Seções, Divs e Articles formam o Body 
+		<section>...</section> Cria seções á página 
+		<div>...</div> Cia divisões na página (div.class) atalho
+		<asile> faz referencia ao conteúdo principal o complementando </asile>
+		<time datetime="2014-07-13">13 de julho de 2014</time> -> tag para colocar a data 
+
+	Rodapé (final da página 
+		<footer>...</footer> Cria o rodapé da página
+
+	Navegadores de páginas 
+		<nav>...</nav> cria um menu de navegação na página (pode ser usado com ul ou ol). 
+			target = "blank" -> abre uma página em branco 
+
+	Lista ordernas(ol) e não ordenadas(ul) 
+		<ul>...</ul> Cria uma lista não ordenada de elementos. 
+		<ol>...<ol> Cria uma lista ordenada de elementos. 
+
+	Itens das listas 
+ 		<li>...</li> itens dos elementos da lista (ol e ul) 
+
+	Inserir imagens e legendas 
+		<img src = “nome_da_imagem.Extensão”> importa uma imagem 
+		<figure></figure> -> bloco para inserir imagens 
+		<figcaption></figcaption> -> insere uma legenda na imagem
+
+
+	Inserir vídeos
+		<iframe width="100%" height="315" src=" internet ou aruivo.extensão " frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> adiciona videos locais e da internet 
+	
+	Inserir documentos ou comando em Java-Script
+		<script>…</script> Adiciona arquivos ou comandos em Java-Script
+	
+	Âncoras (links para outras páginas 
+		<a>www.google.com.br</a> Adiciona um link para um arquivo ou página da web.
+		<a href="#" data-legenda="Clique em mim">Link</a> <!-- a declaração abaixo é válida a partir do HTML 5 -->
+
+	Criar tabelas e seus elementos 
+		<table> ...</table> Cria uma tabela 
+			<thead></thead> cabeçalho da tabela 
+				<th></th> serie que faz parte do rótulo
+			<tbody></tbody> Corpo da tabela 
+				<tr>...</tr> linhas
+				<td>...<td> Colunas 
+			<tfoot></tfoot> rodapé da tabela 
+			wowspan e colspan -> permite ue uma celula ocupe mais de uma linha ou coluna 
+	Características de um mesmo item 
+			<dl></dl> -> descreve um único iten, detalahndo as suas caracteristicas 
+	Formulários 
+		<form>..<form> 
+			<label for ="nomesobrenome">Nome e Sobrenome:</label> Adicriona um texto para entrada de dados 
+			<input type ="text" id = "nomesobrenome" class = "input-padrao" required > Recebe os dados inseridos. A tag input não permite a criação de filhos 
+			<label for = "mensagem">Mensagem</label> outro label 
+			<textarea cols = "70" rows= "10" id ="mensagem"  class = "input-padrao"></textarea required> Área para a escrita da mensagem 
+			<fieldset>…</fieldset> agrupa componetes do formulário são parecidos
+			<legend>Como prefere o nosso contato?</legend> titulo <label for = "radio-email"> <input type = "radio" name = "contato" value = "email"id = "radio-email">Email</label> opção já preenchida 
+			<select>…</select> habilita uma menu com várias opções para selecionar 
+			<option>Manhã</option> opções do menu 
+			<label class = "checkbox"><input type ="checkbox" checked >Gostaria de receber nossas novidades por email?</label> Botão 
+			<input type = "submit" value ="Enviar Formulário"  class = "enviar" >
+			<button type="submit">Enviar</button> -> adiciona um botão (outra forma)
+			<form>
+    				<label for="nome">Nome:</label>
+    				<input id="nome">
+    				<label for="email">Email:</label>
+    				<input id="email">
+
+    				<input type="radio" id="consultoria">
+    				<label for="consultoria">Consultoria</label>
+				</form>
+
+			ou 	O input dentro do label 
+				<label>
+    					<input type="radio">
+    					Consultoria
+				</label>
+
+		Formulário com semantica e validações com o css 5 
+		alidações agrega semantica e usalibilidade 
+			Foco do teclado automático no campo "Nome" assim que a página carregar.
+			Obrigatoriedade de preencher os campos "Nome" e "E-mail".
+			Mensagens explicativas sobre os campos "E-mail" e "Mensagem".
+			
+			<fieldset>
+    				<legend>Dados pessoais</legend>
+    				<label for="nome">Nome:</label>
+    				<input id="nome" name="nome" placeholder="Seu nome aqui" autofocus>
+    				<label for="email">Email:</label>
+    				<input id="email" name="e-mail" placeholder="seu@email.com" type="email"required>
+			</fieldset>
+
+			<fieldset>
+    				<legend>Assunto:</legend>
+    				<label>
+        			<input type="radio" name="assunto" value="consult"> Consultoria</label>
+    				<label>
+        			<input type="radio" name="assunto" value="blog">Blog</label>
+    				<label>
+        			<input type="radio" name="assunto" value="outro">Outro</label>
+			</fieldset>
+		Select 
+			<select name="assunto">
+    				<option value="blog">Blog</option>
+    				<option value="servico">Serviço</option>
+    				<option value="outro">Outro</option>
+			</select>
+		Parttern
+			<input pattern="[A-Za-z0-9]*"> Com esse padrão, agora nosso usuário precisa digitar pelo menos 8 letras ou números para a entrada ser válida
+			<input id="nome" type="text" name="nome" required autofocus pattern="[A-Za-z ']"> Permite ue o usuário coloque apenas letras e espaços 
+			<input id="nome" type="text" name="nome" required autofocus pattern="[A-Za-z ']{4,}"> permite ue o usuário coloque até 4 numeros 
+			<input pattern="[0-9]*" title="Preencha somente com números">
+			<input id="nome" type="text" name="nome"required autofocus pattern="[A-Za-z ']{4,}" title="O nome precisa ter pelo menos 4 caracteres">
+		
+	
+	Identificadores (utilizados nas tags) 
+		id -< serve para nomear elementos da página (não pode ser repetido) seletor # no css
+		class serve para nomear elementos e pode se reperit seletor . (ponto) no cs = flexivilidade
+
+----------------------------------------------------------------------------------------------------
+					CSS
+----------------------------------------------------------------------------------------------------
+	Caracteristicas do Css
+		Usada com as tag do HTML classes ou ids
+
+	Seleções no Css
+		main h1 -> pega o h1 que estiver dentro da tag main 
+		h1,h2 -> seleciona duas ou mais tags 
+		.class h2 -> seleciona o h2 que estiver dentro da classe 
+
+	Seletores do Css
+		|~(til> seleciona elementos que estão depois de outros elementos 
+		|text-indent: 4ch: indenta os parágrafos 
+		|+ seleciona um elemento logo depois de outro 
+		|div > p <seleciona o pai e filho
+		(Trabalhar com classe é a melhor alternativa)
+		. Seleciona classes 
+		# seleciona Ids
+		* -> Seletor universal 
+
+	Medidas relativas 
+		% -> porcentagem -> aumenta os elementos de cordo com um tamanho já definido no Body ex font-size 120% 
+		A porcentagem de largura de um elelemento filho é sempre relacionada a do pai 
+		rem -> equivale a 16px rquivale ou a fonte padrão do navegador (pode ser alterado pelo usuário)
+		em -> segue o rem como base o tmamanho da fonte do elelemento
+		ch -> largura da fonte em relação ao primeiro caracter da mesma 
+		vh -> vertical Heights -> altura vertical da área do elemento (visivel)
+		px(pixels) não é resonsível
+
+	Reset básico do Css 
+		* { /* reset básico*/
+    		margin: 0; 
+    		padding: 0;
+    		box-sizing: border-box;
+		}
+
+	Importações no Css 
+		@import url('https://fonts.googleapis.com/...'); uma fonte do google fonts 
+	
+	Pseudoclasses Classes que o navegador coloca automaticamento utilizando a estrutua do HTML
+		:nth-child(odd/even/2n+1- impares 2n Par) -> Selecionar elementos especisicos da página e elementos aceita funções
+		tr:nth-child(odd) pega os filhos impares da tabela 
+		=! tr :first-child -> seleciona os termos independente 
+		table:nth-child(odd)igual a de cima
+		:first-child -> seleciona o primeiro elemento de cada container 
+		:last-child -> seleciona o último elemento de cada container 
+		bloquequote:nth-of-type(even) seleciona todos os elementos da classe blockquote (pares)
+		:hover -> coloca um efeito no objeto que está com o mmouse encina dele 
+		:active -> Quando clica no objeto 
+		:focus -> O tela está com foco em um campo de formulário 
+		:ckecked -> 
+		Combinando mais de uma pseudoclasses
+			HTML
+			.icones-redes-sociais a {
+    				position: relative;
+			}
+	
+
+			.icones-redes-sociais a:hover::after, 
+			.icones-redes-sociais a:focus::after {
+    			ontent: attr(data-tooltip);
+    			position: absolute;
+    			top: 100%;
+    			right: 0;
+    			text-indent: 0;
+    			width: 300%;
+    			background: black;
+    			font-size: .75em;
+			}
+
+	Pseudoselementos-> São elementos que são criados pelo próprio navegador apenas decorativo deixando o html limpo. 
+		p:first-letter{} permite alterar a primeira letra e alterá-la ou p::fist-letter
+		p:before { content: '"'}
+		p:after {content: 'pseudoelemento'}
+
+	Ferramentas para Design Responsivo  
+		@media(max-width:768px) {} -> reescreve o códido para largura inferior 
+		@media(mib-width:768px) {} -> reescreve o código para largura superor 
+
+	Transform
+		Transforme: Altera um elemento na página 
+		transform: rotate(30deg);	Rotaciona o objeto na página 
+		transform: scale(1.5);	Altera a escala do objeto 
+		transform: skew(20deg);	entorta um pouco para cauda um dos lados
+		transform: traslate (10px,50px)	Muda o objeto de lugar 
+		transform: translate(-50%,-50%);	calcula do centro do elemento
+		overflow: scroll 	coloca barra de rolagem nos elementos
+		transform: scale(1.2) rotate(5deg)
+		opacity .5;	Adiciona opacidade ao elemento 
+
+	Trasições nos elementos: 
+		transition: 300ms;	Aplica uma transição com a medida em milissegundos 
+		
+
+	Alterações na fonte de Textos (h1, H2, H3, H4, H5, H6, p span, cite etc) 
+		font-size: Muda o tamanho da fonte pixel(px)
+		font-family: muda o tipo da fonte
+		font-weight: bold; -> coloca a fonte em negrito  
+		font-style: italic; -> altera o estilo da fonte
+ 
+	Alterações na cor da fonte 
+		color: Muda a cor da fonte 
+			color: inherit -> herda a cor estabelecida anteriormente
+
+	Alterações no texto  
+		Text-align:<atributo> muda o local do texto pode ser direira, esquerda, justificado e centralizado
+			sans-serif: sem serifa ou serif: com serifa
+		text-Decoration -> decoração do texto 
+			nome -> menhum 
+			underlie -> sublinhado
+		line-height: 1.5; aumenta o espaçamentos entre as linhas do parágrafo
+   		text-transform: : altera o visual do texto 
+			uppercase -> em letra maíscula 
+			lowercase -> em letra minúscula
+		text-indent: 1000PX; move o icone na horizontal
+		text-shadow: 2px 2px #000; -> Adiciona uma sombra ao texto 
+
+	Margin adiciona espaçamento externos
+		margin-top -> margim superior 
+		margin-left -> margin da esquerda 
+		margin-right -> margem da direita 
+		margin-bottom -> margin inferior e etc  
+		auto -> caucula o espaçamento automático ex: margin-left: auto; 
+		margin: 0 auto; Centraliza os elementos 
+
+	Padding adiciona espalamento interno no elemento. 
+		padding-bottom -> espaço na parte de baixo. 
+		(aceita os atributos de margin) ex: padding-left -> adiciona só á esquerda 
+
+	Border coloca borda nos elementos 
+		border 10px:(tamanho) solid(tipo) #F1D2D3(cor); -> desenha a borda 
+		tipo solid (sólido) trash (traçado) dots(pontos) 
+		border-width -> aumenta ou diminue a largura da dorda 
+		Alterando as cores individuais das bordas
+		border: 10px solid #C2CCCA;
+    		border-bottom-color: #333;
+    		border-right-color: #FFF;
+    		border-left: transparent;-> deixa da dor de fundo do elemento 
+		border-radius: 10px;	Arredonda as bordas 
+		border-radius: <raios na horizontal> / <raios na vertical>;	Arrendonda os cantos de formas diferentes 
+
+	Largura e Altura
+		width:300px -> muda a largura dos elementos
+		max-width: 1066px; -> Adiciona a largura máxima ao elemento 
+		max-width: 1066px; + margin: auto; -> Centraliza de acordo com a página do navegador 
+		height: 700px;	-> Adiciona a altura do elemento 
+		max-height: 100; -> Adiciona a altura máxima ao elemento 
+		Altura(width) Define a altura da página do site 
+		height: auto; -> O navegador calcula a altura automaticamente
+
+	Definindo o tanho da caixa 
+		box-sizing -> Determina o tamanho da caixa 
+		border-box: pelas bordas 
+		border padding pelo padding 
+		content-box -> pelo conteúdo 
+
+	Alterações nas listas 
+		list-style-type:none; retira os marcadores das listas e o centraliza
+
+	Display: permite definir se o elemento vai empinhar (block) ou não (inline-block) 
+		display: permite alterar o padragão da tag 
+		block -> empilha 
+		inline -> coloca em linha um do lado do outro 
+		inline-block -> mantém o link do tamanho original
+		none -> o elemento desaparece completamente 
+			Imagem e span são inline, ou seja, ficam em sequência 
+
+	Alterações em imagens
+		Troca o texto do HTMl por uma imagem de fundo no html usando 
+		{deixa o texto tranparent e mantem o link na imagem
+ 			margin: 2px; 
+    			color: transparent;  
+    			font-size: 0px; 
+    			width: 40px;
+    			height: 40px;
+   			display: inline-block;}
+		ou { desloca o texto, mas mantém o link na imagem 
+ 			margin: 2px;
+    			color: inherit; /*herda de ul*/ 
+    			font-size: 25px;   
+    			width: 40px;
+   	 		height: 40px;
+    			display: inline-block;
+    			text-indent: -9999px;}
+		filter:blur(30px);	Aplica um filtro que borra a imagem 
+
+	Floats e Clear 
+		Float permite tirar um elemento do fluxo para flutuar ao redr do conteúdo, floats em sequencia formam uma linha 
+			float:left; esquerda 
+			float:rigth; direita 
+		Clear limpa o float em uma determinada posição(left ou right) 
+			clear: right -> limpa á direita 
+			clear: left -> limpa á esquerda
+			clear: both; -> limpa Ambos(both) os lados ou a classe clearfix
+	Posições no Css 
+		position -> desloca um elemento na página 
+			position: relative -> mamtem o fluxo da página 
+			position: absolute -> é relativo á janela do navegador 
+				atributos - ( top, left right, e bottom) fixed (deixa o elemento fixo em relação da tela
+				z-index: -1;	coloca camadas nos elementos com relative ou absolute)
+	
+	Sombras nos elementos: 
+		Box-shadow: 0 4px 4px black;	Adiciona sombra a Caixa
+		box-shadow: 0 0 1em #000, inset 0 0 .5em #fff;	coloca uma sombra por dentro e outra por fora
+
+	Background (fundo da Tela) 
+		bacground-color: Muda a cor de fundo da pagina ou tag do elemento 
+		background-image: url(../imagens/github.png); colar uma imagem de uma pasta
+		Background-image: linear-gradient(to bottom. #F00. #888 80%, #000);
+		backgroundsize: 100% 200px;  -> Define o tamanho do background 
+			 background-position: 40%;	define a posição inicial, relativa a posição de fundo na camada definido por background-origin
+		background: no-repeat: -> tira a repetição 
+		background-attachment: fixed; -> coloca na página toda 
+		background-position: 50% 50%; -> define a posição do background 
+		background-image: radial-gradient(yellow, red);
+		background-image: radial-gradient(circle at bottom left, yellow, red);
+		background-image: radial-gradient(ellipse at left bottom,
+    			rgba(60, 29, 61, 0.8),
+    			rgba(60, 29, 61, 0.8) 65%,
+    			black 65%,
+    			black 70%,
+    			transparent 70%,
+    			transparent);
+		Background-Collor black ou FFFFFF(hex) cor de fundo 
+		background: url("bg.jpg"); colocar uma imagem de fundo 
+	
+	Sinais e símbulos 
+		&copy -> colocar o simbulo de copyright e o & usasado para adicionar outro símbulos
+	Calculos com o Css
+		Vantagens(legibilidade, poder (não presisar mais do javascript para isso) flexbilidade.
+		O Css possiblita o calculo através da função Calc 
+		main {
+    			width: calc(100% - 0.9 * 300px);
+    			... pega o tamnho total da tela e multipica por 9/10 da imagem com 300px
+		}
+	Colocando imagens no label por pseudoelementos 
+			label[for="nome"] {
+    			position: relative;
+		}
+
+			label[for="nome"]:after {
+    			content: "";
+    			background-color: #666;
+    			background-repeat: no-repeat;
+    			background-image: [o destino da imagem aqui]
+    			background-size: 50% 50%;
+    			width: 2em;
+    			height: 2em;
+    			background-position: center;
+    			position: absolute;
+    			top: 100%;
+    			left:0;
+		}
+
+		#nome {
+    			width: calc(100% - 2em);
+    			position: relative;
+    			left: 2em;
+		}
+	Tabelas no css
+		table {
+    			border-collapse: separate; -> separa as células 
+    			border-spacing: 5px; -> espaça as células 
+			}
+		colspan e rowspan no Css 
+			.habilidades [colspan] { (coluna)
+    				text-align: center;
+    				font-style: italic;
+				}
+			.habilidades [rowspan] { (linha)
+    				vertical-align: middle;
+				}
+----------------------------------------------------------------------------------------------------
+	 				GuiaFlexbox Css(caixa - Flex) 
+----------------------------------------------------------------------------------------------------
+	Display: inline; não pertime definir nem largura nem altura para o elemento 
+	Flex é colocado no "pai do elemento" Flex container -> contem diversos itens dentro dele
+	Flex itens -> elementos de dentro 
+	.pai {
+  		display: flex;
+	}
+	
+    	display:flex; -> Ativa o flexbox 
+    	align-items: center; -> alinha os "filhos" elementos ao centro na vertical (altera o eixo y)
+    		align-items: initial; -> volta para a posição inicial
+	justify-content: space-between; -> coloca um espaço entre eles (altera o eixo x)
+    		justify-content: space-around; -> coloca espaço ao reor dos elementos uniformente 
+    		justify-content: flex-end; -> joga o conteúdo para a direita 
+    		justify-content: flex-start; (padrão) Joja o conteudo para a esquerda 
+    	flex-direction: column; -> alinha os elementos em colunas (o y passa a ser o principal)
+    		flex-direction: row; -> alinha os elementos em linhas (muda os eixos)
+    		flex-wrap: wrap; Quebra para a próxima coluna 
+		flex-wrap: nowrap; -> Remove a quebra de linha 
+    		flex-flow: column wrap; -> substitui a flex-direction: column; +  flex-wrap: wrap
+	order: 0; é o padrão do flexbox é aplicado no fillho e não no pai 
+		order:-1; Coloca o elemento selecionado no topo da lista de elementos 
+	flex-grow: 1; -> aumenta o objeto fazendo-o crescer para alcançar todo o espaço, caso tenha mais de um o navegador vai divir o espaço respeitando o grow de cada um deles
+		flex-grow: 0; -> É o padrão dos elementos não cresce 
+	flex-shrink: 2;-> dimuni o elementento em 2x mais divide igual e tira do tamanho do elemento 
+		flex-shrink: 0; -> Não altera o elemento
+		flex-shrink: 1; -> è o padrão dos elementos 
+	flex: 1 1: -> aceita os dois (grow e shrink) 
+	flex-basis: 25%; -> Valor absoluto, tem mais prioridade é semelhante(equivale) a largura (width: 50%).
+		Combinar as probriedades: 
+		A propriedade é a propriedade flex.
+  			flex: 1 1 300px;
+			A ordem dos valores é:
+			flex-grow, flex-shrink, flex-basis.
+	Wrap-Reverse -> inverte a ordem das linhas 
+		.conteudoPrincipal-cursos {
+  		display: flex;
+  		flex-wrap: wrap-reverse;
+		}
+	Flex-Direction: Column-reverse: inverte a ordem dos elemenos nas linha
+		.conteudoPrincipal-cursos {
+  		display: flex;
+  		flex-wrap: wrap;
+  		flex-direction: row-reverse;
+		}
+	flex item: align-self: -> alinha o elemento individualmente
+	container:
+
+		display: flex
+		flex-direction
+		justify-content
+		flex-wrap
+		flex-flow
+		align-items
+		align-content
+
+	flex item:
+		order
+		flex-grow
+		flex-shrink
+		flex-basis
+		flex
+		align-self
+----------------------------------------------------------------------------------------------------
+					Boas Práticas com o uso da arquitetura do Css 
+----------------------------------------------------------------------------------------------------
+	Pasta Asset: 
+		A pasta Asset: Pasta para arquivos estáticos Css e imagem arquivos javascrips, arquivos referentes a icones e fontes com especificações em subpastas 
+		normalize.css é o arquivo responsável por resetar estilos do navegador 
+		reset.css Estilos padrões para os navegadores que não estejam no normalize
+
+	Index.html(página principal do site 	
+		index.html -> arquio da página inicial, é a primeira a ser rederizada
+
+	Desenvolvimento do site 
+		Normalmente deve ser inicializado de cima para baixo.
+
+	Nomes significativos 
+		Não significativo: -> deixa o Css muito amarrado ao HTML, por isso não é recomendável, além disso, complica na manutençõ do arquivo, pois se mudar uma única tag de ordem o Css não funciona.
+			header nav ul li { 
+    				list-style: none;
+			}
+		Significativo: 
+			.menu-itens {
+    			list-style: none;
+			}
+	por que usar nomes significativos nas classes do css: 
+		1º Não depedencia do HTML que pode sofrer alterações 
+		2º Facilidade na manutenção do código posteriormente 
+		3º Melhora a legibilidade do código facilitando o seu entendimento.
+	
+	Atom Design 
+		Facilita a organização da estrutura (pasta e arquivos) do Css 
+		segue o principio da química onde os 
+			átomos (tags) e jutas formam:
+			moléculas (conjunto de atoms), 
+			orgamismos junção a várias moléculas.
+			Templates junção de vários orgamismos informações não reais 
+			páginas contém imagens e desenhos reais
+	Padrões de noneações de classes ou BEM
+		Deve-se adotar apenas um deles 
+			nome-item (traço)
+			nome_item (underline)
+			NomeItem (Cammel Case -> primeira letra maiúscula)
+		BEM 
+			Block(bloco) Element (Elemento) Modifier (modificador)
+			Ornamiza a página e estabelece a hierarquia entree os elementos, pois sabe-se de quem o elemento é filho 
+			Não é necessário a sua utilização para a definição dos nomes dos arquivos Css, usa-se o - (traço)
+				bloco
+				bloco__elemento (2 underlines)
+				bloco--modificador (2 traços)
+				bloco__elemento--modificador (conjunto dos dois acima
+
+----------------------------------------------------------------------------------------------------
+					Guia do GitHub
+----------------------------------------------------------------------------------------------------	
+		
