@@ -682,4 +682,4 @@ Guia de uso do aplicativo no desktop
 	2º Abrir o reservatório Visual Studio Code: Open in Visual Studio code ou Ctrl Shift A 
 	3º Adicinar os arquivos no Visual Studio Code
 	4º Clicar no + para poder comitar o arquivo, escrever o Commit e clicar no botão Commit to main ou branch
-	5º Clicar no push origin para enviar para o reservatório	
+	5º Clicar no push origin para enviar para o reservatório e clicar Push origim
