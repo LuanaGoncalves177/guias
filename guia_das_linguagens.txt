@@ -282,9 +282,15 @@
 		p:before { content: '"'}
 		p:after {content: 'pseudoelemento'}
 
-	Ferramentas para Design Responsivo  
-		@media(max-width:768px) {} -> reescreve o códido para largura inferior 
-		@media(mib-width:768px) {} -> reescreve o código para largura superor 
+	 Seletores de media Querys -Ferramentas usada para design responsivo para Design Responsivo
+		As propiedades que foram ser alteradas por elas dentro dela deve-se ser retirada do código do 
+		seu respectivo seletor css vai para o mair valor.
+			@media(max-width:768px) {} -> reescreve o códido para largura inferior 
+			@media(min-width:768px) {} -> reescreve o código para largura superor 
+		Alterar a largura e a tela
+			@media screen and (min-width:0){} -> seletor para telas pequenas
+			@media screen and (min-width:768px) {} -> seletores para telas de tablets 
+			@media screen and (min-width: 992px){} -> telas maiores Desktops
 
 	Transform
 		Transforme: Altera um elemento na página 
@@ -369,11 +375,11 @@
 
 	Display: permite definir se o elemento vai empinhar (block) ou não (inline-block) 
 		display: permite alterar o padragão da tag 
-		block -> empilha 
-		inline -> coloca em linha um do lado do outro 
-		inline-block -> mantém o link do tamanho original
-		none -> o elemento desaparece completamente 
-			Imagem e span são inline, ou seja, ficam em sequência 
+			block -> empilha e parece 
+			inline -> coloca em linha um do lado do outro 
+			inline-block -> mantém o link do tamanho original
+			none -> o elemento desaparece completamente 
+			Obs: Imagem e span são inline, ou seja, ficam em sequência 
 
 	Alterações em imagens
 		Troca o texto do HTMl por uma imagem de fundo no html usando 
@@ -558,14 +564,15 @@
 		flex-wrap: nowrap; -> Remove a quebra de linha 
     		flex-flow: column wrap; -> substitui a flex-direction: column; +  flex-wrap: wrap
 	order: 0; é o padrão do flexbox é aplicado no fillho e não no pai 
-		order:-1; Coloca o elemento selecionado no topo da lista de elementos 
+		order:-1; Coloca o elemento selecionado no topo da lista de elementos sem mexer no HTML
 	flex-grow: 1; -> aumenta o objeto fazendo-o crescer para alcançar todo o espaço, caso tenha 
 			mais de um o navegador vai divir o espaço respeitando o grow de cada um deles
 		flex-grow: 0; -> É o padrão dos elementos não cresce 
 	flex-shrink: 2;-> dimuni o elementento em 2x mais divide igual e tira do tamanho do elemento 
 		flex-shrink: 0; -> Não altera o elemento
 		flex-shrink: 1; -> è o padrão dos elementos 
-	flex: 1 1: -> aceita os dois (grow e shrink) 
+	flex: 1: cada um dos filhos tem o mesmo tamanho, pode ser diferente  
+		flex: 1 1: -> aceita os dois (grow e shrink) 
 	flex-basis: 25%; -> Valor absoluto, tem mais prioridade é semelhante(equivale) a largura (width: 50%).
 		Combinar as probriedades: 
 		A propriedade é a propriedade flex.
@@ -669,6 +676,7 @@
     				grid-column: 4/4;
     				grid-row: 1/1;
 			}
+
 ---------------------------------------------------------------------------------------------------------------
 				Boas Práticas com o uso da arquitetura do Css 
 ---------------------------------------------------------------------------------------------------------------
@@ -731,9 +739,9 @@
  			Ex: palavra-derivada
 		imagens que servem apenas para estilização e ilustração deve está no css e não no HTML
 		Fazer estilização por odem alfabetica Alt + (seta para baixo), Alt + (seta para cima).
-
+			
 ---------------------------------------------------------------------------------------------------------------
-						Guia Git e Github
+						    Guia Git e Github
 ---------------------------------------------------------------------------------------------------------------		
 Guia de uso do Terminal 
 	gir --version -> mostra a versão do git 
@@ -823,10 +831,10 @@ Guia de uso do aplicativo no desktop
 	2º Abrir o reservatório Visual Studio Code: Open in Visual Studio code ou Ctrl Shift A 
 	3º Adicinar os arquivos no Visual Studio Code
 	4º Clicar no + para poder comitar o arquivo, escrever o Commit e clicar no botão Commit to main ou branch
-	5º Clicar no push origin para enviar para o reservatório
-
+	5º Clicar no push origin para enviar para o reservatório	
+		 
 ----------------------------------------------------------------------------------------------------	
-				Links esternos para estudos e Pesquisa
+				Links externos para estudos e Pesquisa
 ----------------------------------------------------------------------------------------------------	
 	Bibliotecas de imagens e figma
 		https://www.figma.com/file/IKOzIUXPSy1KiamHFLeuAB/atividade?node-id=0%3A1
