@@ -1,7 +1,6 @@
-
-----------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 					Guia de HTML
-----------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 	Caracteristicas do HTML
 	
 	É uma linguagem e programação responsável pela criação da estrutura da página
@@ -26,7 +25,7 @@
 	Body(corpo da página)
 		<body>...</body> - corpo do documento (dentro de html).
 
-	Estrutura básica do HTML
+	Estrutura básica do HTMLS
 		<!DOCTYPE html>
 			<html lang="pt-br">
 			<head>
@@ -51,6 +50,7 @@
 
 	Adicionar Copyright e outros símbulos 
 		<p class = "copyright">&copy;Copyright 2019</p> paragráfo com o copyright 
+
 	
 	Parágrafos e seus respectivos Atributos 
 		<p>...<p> Adiciona parágrafos 
@@ -58,7 +58,7 @@
 			<strong>...<strong> Ativa o negrito no parágrafo
 			<sub>...</sub> Adiciona texto abaixo da letra 
 			<sup>...</sup> Adiciona texto acima da letra (potenciação) 
-			<abbr title = “Superior Tribunal de Justiça” >STJ</abbr> Adiciona siglas e ao toque do mouse ostra o seu significado.
+			<abbr title = “Superior Tribunal de Justiça” >STJ</abbr> Adiciona siglas e ao toque do mouse mostra o seu significado.
 			<p>lorem*2</p> Coloca um texto para criar conte[udo 
 
 	Citações 
@@ -110,13 +110,15 @@
 		<figure></figure> -> bloco para inserir imagens 
 		<figcaption></figcaption> -> insere uma legenda na imagem
 
+
 	Inserir vídeos
-		<iframe width="100%" height="315" src=" internet ou aruivo.extensão " frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> adiciona videos locais e da internet 
+		<iframe width="100%" height="315" src=" internet ou aruivo.extensão " frameborder="0" allow="accelerometer; 
+		autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> adiciona videos locais e da internet 
 	
 	Inserir documentos ou comando em Java-Script
 		<script>…</script> Adiciona arquivos ou comandos em Java-Script
 	
-	Âncoras (links para outras páginas 
+	Âncoras (links para outras páginas não herda a cor do seu elemento pai por padrão)
 		<a>www.google.com.br</a> Adiciona um link para um arquivo ou página da web.
 		<a href="#" data-legenda="Clique em mim">Link</a> <!-- a declaração abaixo é válida a partir do HTML 5 -->
 
@@ -134,11 +136,13 @@
 	Formulários 
 		<form>..<form> 
 			<label for ="nomesobrenome">Nome e Sobrenome:</label> Adicriona um texto para entrada de dados 
-			<input type ="text" id = "nomesobrenome" class = "input-padrao" required > Recebe os dados inseridos. A tag input não permite a criação de filhos 
+			<input type ="text" id = "nomesobrenome" class = "input-padrao" required > Recebe os dados inseridos.
+				 A tag input não permite a criação de filhos 
 			<label for = "mensagem">Mensagem</label> outro label 
 			<textarea cols = "70" rows= "10" id ="mensagem"  class = "input-padrao"></textarea required> Área para a escrita da mensagem 
 			<fieldset>…</fieldset> agrupa componetes do formulário são parecidos
-			<legend>Como prefere o nosso contato?</legend> titulo <label for = "radio-email"> <input type = "radio" name = "contato" value = "email"id = "radio-email">Email</label> opção já preenchida 
+			<legend>Como prefere o nosso contato?</legend> titulo <label for = "radio-email"> 
+				<input type = "radio" name = "contato" value = "email"id = "radio-email">Email</label> opção já preenchida 
 			<select>…</select> habilita uma menu com várias opções para selecionar 
 			<option>Manhã</option> opções do menu 
 			<label class = "checkbox"><input type ="checkbox" checked >Gostaria de receber nossas novidades por email?</label> Botão 
@@ -196,13 +200,14 @@
 			<input pattern="[0-9]*" title="Preencha somente com números">
 			<input id="nome" type="text" name="nome"required autofocus pattern="[A-Za-z ']{4,}" title="O nome precisa ter pelo menos 4 caracteres">
 		
+	
 	Identificadores (utilizados nas tags) 
 		id -< serve para nomear elementos da página (não pode ser repetido) seletor # no css
 		class serve para nomear elementos e pode se reperit seletor . (ponto) no cs = flexivilidade
 
-----------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 					CSS
-----------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 	Caracteristicas do Css
 		Usada com as tag do HTML classes ou ids
 
@@ -257,6 +262,7 @@
 			.icones-redes-sociais a {
     				position: relative;
 			}
+	
 
 			.icones-redes-sociais a:hover::after, 
 			.icones-redes-sociais a:focus::after {
@@ -270,7 +276,8 @@
     			font-size: .75em;
 			}
 
-	Pseudoselementos-> São elementos que são criados pelo próprio navegador apenas decorativo deixando o html limpo. 
+	Pseudoselementos-> São elementos que são criados pelo próprio navegador apenas decorativo 
+		deixando o html limpo. 
 		p:first-letter{} permite alterar a primeira letra e alterá-la ou p::fist-letter
 		p:before { content: '"'}
 		p:after {content: 'pseudoelemento'}
@@ -305,8 +312,8 @@
 			color: inherit -> herda a cor estabelecida anteriormente
 
 	Alterações no texto  
-		Text-align:<atributo> muda o local do texto pode ser direira, esquerda, justificado e centralizado
-			sans-serif: sem serifa ou serif: com serifa
+		Text-align:<atributo> muda o local do texto pode ser direira, esquerda, 
+			justificado e centralizado sans-serif: sem serifa ou serif: com serifa
 		text-Decoration -> decoração do texto 
 			nome -> menhum 
 			underlie -> sublinhado
@@ -339,8 +346,9 @@
     		border-right-color: #FFF;
     		border-left: transparent;-> deixa da dor de fundo do elemento 
 		border-radius: 10px;	Arredonda as bordas 
-		border-radius: <raios na horizontal> / <raios na vertical>;	Arrendonda os cantos de formas diferentes 
-
+		border-radius: <raios na horizontal> / <raios na vertical>;	
+			Arrendonda os cantos de formas diferentes 
+		border-radius: 100% arredonda a imagem por completo.
 	Largura e Altura
 		width:300px -> muda a largura dos elementos
 		max-width: 1066px; -> Adiciona a largura máxima ao elemento 
@@ -387,7 +395,8 @@
 		filter:blur(30px);	Aplica um filtro que borra a imagem 
 
 	Floats e Clear 
-		Float permite tirar um elemento do fluxo para flutuar ao redr do conteúdo, floats em sequencia formam uma linha 
+		Float permite tirar um elemento do fluxo para flutuar ao redr do conteúdo, 
+		floats em sequencia formam uma linha.
 			float:left; esquerda 
 			float:rigth; direita 
 		Clear limpa o float em uma determinada posição(left ou right) 
@@ -410,7 +419,8 @@
 		background-image: url(../imagens/github.png); colar uma imagem de uma pasta
 		Background-image: linear-gradient(to bottom. #F00. #888 80%, #000);
 		backgroundsize: 100% 200px;  -> Define o tamanho do background 
-			 background-position: 40%;	define a posição inicial, relativa a posição de fundo na camada definido por background-origin
+			 background-position: 40%;	define a posição inicial, relativa a posição de 
+				fundo na camada definido por background-origin
 		background: no-repeat: -> tira a repetição 
 		background-attachment: fixed; -> coloca na página toda 
 		background-position: 50% 50%; -> define a posição do background 
@@ -425,9 +435,15 @@
     			transparent);
 		Background-Collor black ou FFFFFF(hex) cor de fundo 
 		background: url("bg.jpg"); colocar uma imagem de fundo 
+
+	Background - Atalho no Css
+		.class__item{
+    			background: url('../../img/banner.jpg') no-repeat center / cover;
+		}
 	
 	Sinais e símbulos 
 		&copy -> colocar o simbulo de copyright e o & usasado para adicionar outro símbulos
+	
 	Calculos com o Css
 		Vantagens(legibilidade, poder (não presisar mais do javascript para isso) flexbilidade.
 		O Css possiblita o calculo através da função Calc 
@@ -459,6 +475,7 @@
     			position: relative;
     			left: 2em;
 		}
+
 	Tabelas no css
 		table {
     			border-collapse: separate; -> separa as células 
@@ -472,9 +489,55 @@
 			.habilidades [rowspan] { (linha)
     				vertical-align: middle;
 				}
-----------------------------------------------------------------------------------------------------
-	 				GuiaFlexbox Css(caixa - Flex) 
-----------------------------------------------------------------------------------------------------
+	Transições e animações 
+		Transition -> serve para fazer transições graduais, usa o nome da propriedade e não o seu conteúdo 
+			.classe-nome {
+    				...
+    			transition: transform 1s, box-shadow 2s;
+			}
+			transition-deley:0s, 1s ; permite configurar uma demora para o inicio da transição
+			para cada uma.  
+			tipo de suavização: linear (nenhuma) com ease-in (começo) ease-out (final), 
+				ou ease-in-out (nos dois).
+		
+		Animation -> permite fazer animação indepedente da interação do usuário com a página 
+			
+			h1 {
+    				animation: nome 2s;
+			}
+
+			@keyframes nome {    Permite especificar o qe acontece a cada frame da aminação
+    				0% {
+        				opacity: 0;
+    				}
+    				100% {
+       					 opacity: 1;
+    				}
+			}
+			.class {
+    				...
+    				position: relative;
+    				animation: nome2 1s infinite; -> repete infinitivamente 
+    				animation-direction: alternate; -> altera de 1 a 0 
+    				animation-timing-function: ease-in;
+			}
+			@keyframes nome2 {
+    				from {
+        				top: 0;
+    				}
+    				to {
+        				top: 1 em;
+    					}
+				}
+			animation-play-state: paused; -> pausa a animação 
+			animation-fill-mode: backwards; -> Essa propriedade nos permite fazer com que o 
+				navegador aplique o estilo inicial de uma animação antes mesmo de ela 
+				começar (valor backwards)
+			animation-fill-mode: forwards; -> após terminar executar ou 
+			animation-fill-mode: both; -> Faz as duas coisas ao mesmo tempo 
+----------------------------------------------------------------------------------------------------------------
+	 				Guia Flexbox Css (caixa - Flex) 
+----------------------------------------------------------------------------------------------------------------
 	Display: inline; não pertime definir nem largura nem altura para o elemento 
 	Flex é colocado no "pai do elemento" Flex container -> contem diversos itens dentro dele
 	Flex itens -> elementos de dentro 
@@ -496,7 +559,8 @@
     		flex-flow: column wrap; -> substitui a flex-direction: column; +  flex-wrap: wrap
 	order: 0; é o padrão do flexbox é aplicado no fillho e não no pai 
 		order:-1; Coloca o elemento selecionado no topo da lista de elementos 
-	flex-grow: 1; -> aumenta o objeto fazendo-o crescer para alcançar todo o espaço, caso tenha mais de um o navegador vai divir o espaço respeitando o grow de cada um deles
+	flex-grow: 1; -> aumenta o objeto fazendo-o crescer para alcançar todo o espaço, caso tenha 
+			mais de um o navegador vai divir o espaço respeitando o grow de cada um deles
 		flex-grow: 0; -> É o padrão dos elementos não cresce 
 	flex-shrink: 2;-> dimuni o elementento em 2x mais divide igual e tira do tamanho do elemento 
 		flex-shrink: 0; -> Não altera o elemento
@@ -520,8 +584,8 @@
   		flex-direction: row-reverse;
 		}
 	flex item: align-self: -> alinha o elemento individualmente
-	container:
 
+	container:
 		display: flex
 		flex-direction
 		justify-content
@@ -537,11 +601,80 @@
 		flex-basis
 		flex
 		align-self
+
+		
 ----------------------------------------------------------------------------------------------------
-					Boas Práticas com o uso da arquitetura do Css 
-----------------------------------------------------------------------------------------------------
+						Guia de Css Grid Layout
+----------------------------------------------------------------------------------------------------	
+	
+	Serve para criar templetes mais organizados, pois define a área que cada elemento vai ocupar, 
+		além disso facilita na organização da página, pois permite definir seus respectivos lugares 
+			e simplifica o desenvolvimento do layout do site. 
+			Aplica no pai dos elementos, faz com que o mesmo se comporte como gride
+		
+		.pai-dos-elementos{
+		
+	Layout básico da área
+    		background: #f1f1f1;
+    		display: grid;  -> aativa o grid layout 
+    		grid-template-areas: -> define as áreas da página 
+        		"área1"
+        		"área2"
+       			"área3";
+    		grid-template-columns: auto; -> define as colunas da página 
+    		grid-template-rows: 50px auto auto; -> define as linhas e seus respectvos tamanhos 
+			(podem ser definidas em %, vh, auto, px, vw e etc.)
+		}
+		
+		//referente a área1 
+		.cabecalho {
+    			background-color: green;
+    			grid-area: cabecalho; -> associa com as áres definidas no pai e repete nas demais 
+		}
+ 		
+		//referente a área2
+		.conteudo {
+    			background-color: red;
+    			grid-area: conteudo;
+    			height: 100vh;
+			}
+
+		//referente a área 3 
+		.rodape {
+    			background-color: blue;
+    			grid-area: rodape;
+			}	
+
+	Posicionando os elementos dentro da grid 
+			.classe (pai) {
+    				display: grid;
+				 grid-gap: .2rem; -> dá um espaçamento entre linhas e entre colunas
+    				grid-template-columns: 25% 25% 25% 25%; -> tamanho das colunas 4/100 = 25%
+    				grid-template-rows: 33.3% 33.3% 33.3%; -> tamanho das linhas 3/11 = 33.3%
+   				height: calc(100vh - 50px); -> retirando a diferencia do cabeçalho 
+			}
+			// separando a gride um maior (3/2) principal e os restante em secundários 1/1
+			classe__principal, .classe__secundario {
+   				background: center / cover no-repeat; 
+			}
+			.classe__principal { -> forma completa 
+    				background-image: url(../img/imagem.jpg);
+    				grid-column-start: 1;
+    				grid-column-end: 4;
+    				grid-row-start: 1;
+    				grid-row-end: 3;
+			}
+			.classe__secundario:nth-child(n) { -> forma reduzida
+    				background-image: url(../img/imagem2.jpg);
+    				grid-column: 4/4;
+    				grid-row: 1/1;
+			}
+---------------------------------------------------------------------------------------------------------------
+				Boas Práticas com o uso da arquitetura do Css 
+---------------------------------------------------------------------------------------------------------------
 	Pasta Asset: 
-		A pasta Asset: Pasta para arquivos estáticos Css e imagem arquivos javascrips, arquivos referentes a icones e fontes com especificações em subpastas 
+		A pasta Asset: Pasta para arquivos estáticos Css e imagem arquivos javascrips, 
+			arquivos referentes a icones e fontes com especificações em subpastas 
 		normalize.css é o arquivo responsável por resetar estilos do navegador 
 		reset.css Estilos padrões para os navegadores que não estejam no normalize
 
@@ -552,7 +685,9 @@
 		Normalmente deve ser inicializado de cima para baixo.
 
 	Nomes significativos 
-		Não significativo: -> deixa o Css muito amarrado ao HTML, por isso não é recomendável, além disso, complica na manutençõ do arquivo, pois se mudar uma única tag de ordem o Css não funciona.
+		Não significativo: -> deixa o Css muito amarrado ao HTML, 
+			por isso não é recomendável, além disso, complica na manutençõ do arquivo, 
+				pois se mudar uma única tag de ordem o Css não funciona.
 			header nav ul li { 
     				list-style: none;
 			}
@@ -573,6 +708,7 @@
 			orgamismos junção a várias moléculas.
 			Templates junção de vários orgamismos informações não reais 
 			páginas contém imagens e desenhos reais
+
 	Padrões de noneações de classes ou BEM
 		Deve-se adotar apenas um deles 
 			nome-item (traço)
@@ -580,102 +716,53 @@
 			NomeItem (Cammel Case -> primeira letra maiúscula)
 		BEM 
 			Block(bloco) Element (Elemento) Modifier (modificador)
-			Ornamiza a página e estabelece a hierarquia entree os elementos, pois sabe-se de quem o elemento é filho 
-			Não é necessário a sua utilização para a definição dos nomes dos arquivos Css, usa-se o - (traço)
+			Ornamiza a página e estabelece a hierarquia entree os elementos, pois sabe-se 
+				de quem o elemento é filho 
+			Não é necessário a sua utilização para a definição dos nomes dos arquivos Css, 
+			usa-se o - (traço)
 				bloco
 				bloco__elemento (2 underlines)
 				bloco--modificador (2 traços)
 				bloco__elemento--modificador (conjunto dos dois acima
-
-----------------------------------------------------------------------------------------------------
-					Guia do GitHub
+				bloco__elemento1___elemento2 (2 underlines + 3 underlines)
+		Quando se tem mais de um elemento coloca-se em pasta para melhor organização 
+		Pastas com duas ou mais palavras usa-se o Cammel Case. Ex: primeiraPasta
+		hífem -> coloca quando a palavra que vai nomear a classe é composta por duas palavras
+ 			Ex: palavra-derivada
+		imagens que servem apenas para estilização e ilustração deve está no css e não no HTML
+		Fazer estilização por odem alfabetica Alt + (seta para baixo), Alt + (seta para cima).	
+		 
 ----------------------------------------------------------------------------------------------------	
-Guia de uso do Terminal 
-	gir --version -> mostra a versão do git 
-	clear -> limpa a tela 
-	ls -> lista os diretorios e arquivos do repositório 
-	cd -> muda de diretório 
-	cd ../luana/ -> vai direto para a pasta 
-	cd .. -> volta um diretório acima 
+				Links esternos para estudos e Pesquisa
+----------------------------------------------------------------------------------------------------	
+	Bibliotecas de imagens e figma
+		https://www.figma.com/file/IKOzIUXPSy1KiamHFLeuAB/atividade?node-id=0%3A1
+		https://www.flaticon.com/
 
-Primeiros Passos
-	git init nome_presositorio-> inicializa um repositório 
-	git status -> mostra o status do repositório 
+	Google fonts
+		https://fonts.google.com/
 
-configuração do repositório
-	git config --local user.name "Seu nome aqui"
-	git config --local user.email "seu@email.aqui"
-	git config user.email
-	git config user.name 
+	Github 
+		https://medium.com/datadriveninvestor/git-rebase-vs-merge-cc5199edd77c
+		https://git-school.github.io/visualizing-git/
+		https://guides.github.com/activities/hello-world/
+		https://devhints.io/git-log
+		https://git-scm.com/book/pt-br/v2/Fundamentos-de-Git-Gravando-Altera%C3%A7%C3%B5es-em-Seu-Reposit%C3%B3rio
 
-Manipulando arquivos 
-	git add arquivo.html -> permitir que o git monitore o arquivo 
-	git add . monioria todos os arquivos 
-	git rm remove o arquivo do monitoramento 
-	git restore arquivo.txt -> restaura o arquivo 
-	git commit -m "mensagem" exibe uma mensagem no git 
-	OBS: Não deve comitar código que não funciona 
+	Mozila Guia para desenvolvedores web 
+		https://developer.mozilla.org/pt-BR/docs/Web
+	
+	HTML
+		https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/Input
 
-Histórico 
-	git log -> nostra o histórico de alterações 
-	git log --oneline -> resumido 
-	git log -p -> mostra os detalhes
-	git log -n <num> mostras os ultimos n commites 
-	git log --pretty="format:%h"
-	git log --graph-> as linhas expexifica de desenvolvimento 
-	https://devhints.io/git-log -> site de comandos personalizados do git 
-	arquivo.gitignore -> o Git ingnora esse arquivo 
+	CSS
+		https://caniuse.com/ -> saber quais as funçõess do Css roda nos navegadores 
+	Flex-Box 
+		http://www.flexboxdefense.com/ -> Jogos ára treinar o Flex-box
+		https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
-	Criação do servidor 
-	mkdir servidor -> criando o servido para acesso remoto 
-	git init --bare só contem as alterações 
-	C:/Usser/endereço
-	servidor/ -> caminho do servidor local 
-	git remote -> lista todos os diretórios remotos 
-	git remote add local (lugar) C:/... (caminho, ou URL do servidor)
-	git remote rm <nome> -> remove diretórios remotos 
-	git remote -v mostra o endereço do local 
-	git clone /c:/Users/Rosane/Desktop/Alura/Cursos/github/
-	servidor/ projeto -> clonando os dados do servidor 
-	git push local(servidor) master(usuário) -> enviar para o servidor 
-	git remote rename origin local -> altera o nome da pasta 
-	git pull local master -> trazendo do servidor 
+	Grid Layout
 
-github 
-	git remote add origin https://github.com/usuario111/nome.git -> adicionando o github 
-	git push -u origin master-> colocando os dados no git hub (coloca tudo)
-	git push origin master 
-
-Branches (ramos) e master (padrão) 
-	git branch -> mostra os branchs 
-	git branch <novo> -> cria novo branch 
-	git checkout <branch> -> altera para o novo branch
-	git checkout -b <novo> -> cria um novo branch e entra nele
-	git chekout -- <arquivo.ext> descarta as alterações do arquivo. 
-	git merge <branch> -> feito na master adicionado as alterações do branch
-	git rebase <branch> -> atualiza a master 
-
-Desfazendo e guardando as alterações 
-	git reset HEAD <arquivo.ext> -> se estiver sido adicionado renove o aruivo e permite apagá-lo
-	git revert 2bf7b9d2c7188ef9006ebe04b72f30f7c53b42ab -> desfaz depois de comitado pelo commit
-	git stash -> guarda as alterações para depois 
-	git stash list -> mostra a lista de arquivos guardados 
-	git stash pop -> tira da stash a ultima alteração e remove ela da lista 
-
-Acessando o passado do código 
-	5b97dff id do comit são únicos
-	git checkout 5b97dff 
-	git diff <commit1>..<commit2> ver todas as alterações feita no código 
-	git diff mostras as alterações que ainda não foram comitadas 
-
-tag e realises 
-	git tag -a c0.1.0 -m "lançando a primeira versão beta da aplicação do curso" -> coloca a primeira tag com mensagem 
-	git tag -> mostra as tags existentes 
-	git push local v0.1.0 -> enviando a versão para o servidor 
-
-Guia de uso do aplicativo no desktop
-	1º Criar um novo: File -> new repository Ctrl + n -> enter 
-	2º Abrir o reservatório Visual Studio Code: Open in Visual Studio code ou Ctrl Shift A 
-	3º Adicinar os arquivos no Visual Studio Code
-	4º Clicar no + para poder comitar o arquivo, escrever o Commit e clicar no botão Commit to main ou branch
-	5º Clicar no push origin para enviar para o reservatório e clicar Push origim
+	Boas práticas
+		https://www.alura.com.br/artigos/criando-componentes-css-com-padrao-bem -> Padrão BEM
+		
