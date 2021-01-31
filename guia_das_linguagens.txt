@@ -730,8 +730,101 @@
 		hífem -> coloca quando a palavra que vai nomear a classe é composta por duas palavras
  			Ex: palavra-derivada
 		imagens que servem apenas para estilização e ilustração deve está no css e não no HTML
-		Fazer estilização por odem alfabetica Alt + (seta para baixo), Alt + (seta para cima).	
-		 
+		Fazer estilização por odem alfabetica Alt + (seta para baixo), Alt + (seta para cima).
+
+---------------------------------------------------------------------------------------------------------------
+						Guia Git e Github
+---------------------------------------------------------------------------------------------------------------		
+Guia de uso do Terminal 
+	gir --version -> mostra a versão do git 
+	clear -> limpa a tela 
+	ls -> lista os diretorios e arquivos do repositório 
+	cd -> muda de diretório 
+	cd ../luana/ -> vai direto para a pasta 
+	cd .. -> volta um diretório acima 
+
+Primeiros Passos
+	git init nome_presositorio-> inicializa um repositório 
+	git status -> mostra o status do repositório 
+
+configuração do repositório
+	git config --local user.name "Seu nome aqui"
+	git config --local user.email "seu@email.aqui"
+	git config user.email
+	git config user.name 
+
+Manipulando arquivos 
+	git add arquivo.html -> permitir que o git monitore o arquivo 
+	git add . monioria todos os arquivos 
+	git rm remove o arquivo do monitoramento 
+	git restore arquivo.txt -> restaura o arquivo 
+	git commit -m "mensagem" exibe uma mensagem no git 
+	Não deve comitar código que não funciona 
+
+Histórico 
+	git log -> nostra o histórico de alterações 
+	git log --oneline -> resumido 
+	git log -p -> mostra os detalhes
+	git log -n <num> mostras os ultimos n commites 
+	git log --pretty="format:%h"
+	git log --graph-> as linhas expexifica de desenvolvimento 
+	https://devhints.io/git-log -> site de comandos personalizados do git 
+	arquivo.gitignore -> o Git ingnora esse arquivo 
+
+Criação do servidor 
+	mkdir servidor -> criando o servido para acesso remoto 
+	git init --bare só contem as alterações 
+	C:/Users/nome/github/
+	servidor/ -> caminho do servidor local 
+	git remote -> lista todos os diretórios remotos 
+	git remote add local (lugar) C:/... (caminho, ou URL do servidor)
+	git remote rm <nome> -> remove diretórios remotos 
+	git remote -v mostra o endereço do local 
+	git clone /c:/Users/Rosane/Desktop/Alura/Cursos/github/
+	servidor/ projeto -> clonando os dados do servidor 
+	git push local(servidor) master(usuário) -> enviar para o servidor 
+	git remote rename origin local -> altera o nome da pasta 
+	git pull local master -> trazendo do servidor 
+
+github 
+	git remote add origin https://github.com/usuario147/nome.git -> adicionando o github 
+	git push -u origin master-> colocando os dados no git hub (coloca tudo)
+	git push origin master 
+
+Branches (ramos) e master (padrão) 
+	git branch -> mostra os branchs 
+	git branch <novo> -> cria novo branch 
+	git checkout <branch> -> altera para o novo branch
+	git checkout -b <novo> -> cria um novo branch e entra nele
+	git chekout -- <arquivo.ext> descarta as alterações do arquivo. 
+	git merge <branch> -> feito na master adicionado as alterações do branch
+	git rebase <branch> -> atualiza a master 
+
+Desfazendo e guardando as alterações 
+	git reset HEAD <arquivo.ext> -> se estiver sido adicionado renove o aruivo e permite apagá-lo
+	git revert 2bf7b9d2c7188ef9006ebe04b72f30f7c53b42ab -> desfaz depois de comitado pelo commit
+	git stash -> guarda as alterações para depois 
+	git stash list -> mostra a lista de arquivos guardados 
+	git stash pop -> tira da stash a ultima alteração e remove ela da lista 
+
+Acessando o passado do código 
+	5b97dff id do comit são únicos
+	git checkout 5b97dff 
+	git diff <commit1>..<commit2> ver todas as alterações feita no código 
+	git diff mostras as alterações que ainda não foram comitadas 
+
+tag e realises 
+	git tag -a c0.1.0 -m "lançando a primeira versão beta da aplicação do curso" -> coloca a primeira tag com mensagem 
+	git tag -> mostra as tags existentes 
+	git push local v0.1.0 -> enviando a versão para o servidor 
+
+Guia de uso do aplicativo no desktop
+	1º Criar um novo: File -> new repository Ctrl + n -> enter 
+	2º Abrir o reservatório Visual Studio Code: Open in Visual Studio code ou Ctrl Shift A 
+	3º Adicinar os arquivos no Visual Studio Code
+	4º Clicar no + para poder comitar o arquivo, escrever o Commit e clicar no botão Commit to main ou branch
+	5º Clicar no push origin para enviar para o reservatório
+
 ----------------------------------------------------------------------------------------------------	
 				Links esternos para estudos e Pesquisa
 ----------------------------------------------------------------------------------------------------	
