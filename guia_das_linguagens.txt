@@ -290,7 +290,8 @@
 		Alterar a largura e a tela
 			@media screen and (min-width:0){} -> seletor para telas pequenas
 			@media screen and (min-width:768px) {} -> seletores para telas de tablets 
-			@media screen and (min-width: 992px){} -> telas maiores Desktops
+			@media screen and (min-width: 992px){} -> telas maiores Desktops antigos 
+			@media screen and (min-width: 1200px){} -> telas maiores Desktops mais modernos
 
 	Transform
 		Transforme: Altera um elemento na página 
@@ -555,7 +556,7 @@
     	align-items: center; -> alinha os "filhos" elementos ao centro na vertical (altera o eixo y)
     		align-items: initial; -> volta para a posição inicial
 	justify-content: space-between; -> coloca um espaço entre eles (altera o eixo x)
-    		justify-content: space-around; -> coloca espaço ao reor dos elementos uniformente 
+    		justify-content: space-around; -> coloca espaço ao redor dos elementos uniformente 
     		justify-content: flex-end; -> joga o conteúdo para a direita 
     		justify-content: flex-start; (padrão) Joja o conteudo para a esquerda 
     	flex-direction: column; -> alinha os elementos em colunas (o y passa a ser o principal)
@@ -618,6 +619,7 @@
 		além disso facilita na organização da página, pois permite definir seus respectivos lugares 
 			e simplifica o desenvolvimento do layout do site. 
 			Aplica no pai dos elementos, faz com que o mesmo se comporte como gride
+			Grid -> pode receber temples, colunas e linhas 
 		
 		.pai-dos-elementos{
 		
@@ -676,6 +678,12 @@
     				grid-column: 4/4;
     				grid-row: 1/1;
 			}
+
+		Definir a largura do elemento no grid
+			grid-template-rows: 175px auto; 
+		Ocultar elementos do grid
+        		grid-column: none; -> não exibe o elemento ue está na coluna 
+        		grid-row: none; -> não exibe o elemento ue está na linha
 
 ---------------------------------------------------------------------------------------------------------------
 				Boas Práticas com o uso da arquitetura do Css 
@@ -863,6 +871,7 @@ Guia de uso do aplicativo no desktop
 		https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 	Grid Layout
+		https://cssgridgarden.com/
 
 	Boas práticas
 		https://www.alura.com.br/artigos/criando-componentes-css-com-padrao-bem -> Padrão BEM
