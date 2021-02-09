@@ -1,0 +1,62 @@
+---------------------------------------------------------------------------------------------------------------
+				Boas Práticas com o uso da arquitetura do Css 
+---------------------------------------------------------------------------------------------------------------
+	Pasta Asset: 
+		A pasta Asset: Pasta para arquivos estáticos Css e imagem arquivos javascrips, 
+			arquivos referentes a icones e fontes com especificações em subpastas 
+		normalize.css é o arquivo responsável por resetar estilos do navegador 
+		reset.css Estilos padrões para os navegadores que não estejam no normalize
+
+	Index.html(página principal do site 	
+		index.html -> arquio da página inicial, é a primeira a ser rederizada
+
+	Desenvolvimento do site 
+		Normalmente deve ser inicializado de cima para baixo.
+
+	Nomes significativos 
+		Não significativo: -> deixa o Css muito amarrado ao HTML, 
+			por isso não é recomendável, além disso, complica na manutençõ do arquivo, 
+				pois se mudar uma única tag de ordem o Css não funciona.
+			header nav ul li { 
+    				list-style: none;
+			}
+		Significativo: 
+			.menu-itens {
+    			list-style: none;
+			}
+	por que usar nomes significativos nas classes do css: 
+		1º Não depedencia do HTML que pode sofrer alterações 
+		2º Facilidade na manutenção do código posteriormente 
+		3º Melhora a legibilidade do código facilitando o seu entendimento.
+	
+	Atom Design 
+		Facilita a organização da estrutura (pasta e arquivos) do Css 
+		segue o principio da química onde os 
+			átomos (tags) e jutas formam:
+			moléculas (conjunto de atoms), 
+			orgamismos junção a várias moléculas.
+			Templates junção de vários orgamismos informações não reais 
+			páginas contém imagens e desenhos reais
+
+	Padrões de noneações de classes ou BEM
+		Deve-se adotar apenas um deles 
+			nome-item (traço)
+			nome_item (underline)
+			NomeItem (Cammel Case -> primeira letra maiúscula)
+		BEM 
+			Block(bloco) Element (Elemento) Modifier (modificador)
+			Ornamiza a página e estabelece a hierarquia entree os elementos, pois sabe-se 
+				de quem o elemento é filho 
+			Não é necessário a sua utilização para a definição dos nomes dos arquivos Css, 
+			usa-se o - (traço)
+				bloco
+				bloco__elemento (2 underlines)
+				bloco--modificador (2 traços)
+				bloco__elemento--modificador (conjunto dos dois acima
+				bloco__elemento1___elemento2 (2 underlines + 3 underlines)
+		Quando se tem mais de um elemento coloca-se em pasta para melhor organização 
+		Pastas com duas ou mais palavras usa-se o Cammel Case. Ex: primeiraPasta
+		hífem -> coloca quando a palavra que vai nomear a classe é composta por duas palavras
+ 			Ex: palavra-derivada
+		imagens que servem apenas para estilização e ilustração deve está no css e não no HTML
+		Fazer estilização por odem alfabetica Alt + (seta para baixo), Alt + (seta para cima).
