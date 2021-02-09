@@ -1,0 +1,135 @@
+---------------------------------------------------------------------------------------------------------------
+					Guia JavaScript - Primeiros passos 
+---------------------------------------------------------------------------------------------------------------
+Visual Studio Code
+	shift auto seta para baixo copia o valor 
+ctrl k c coloca comentário 
+ctrl k u tira comentário
+	
+Características do JavaScript
+	Console.log(): imprime na tela 
+	vírgula não é obrigatório, mas é bom usar pelas boas práticas
+	é case sensitive, ou seja, letras maiúsclas e minuscula fazem diferença
+	// adicionar comentários
+	É fracamente tipado o tipo da variavel pode mudar. porem não é recomendável
+	Colocar todad as váriaveis de um só tipo Maiúscula ou Minúscula
+	Manter a consistência do código, evitar variações de variaveis , ponto e vírgula
+	De sempre nomes completos para variaveis, nomes que demostram a sua função no código.
+	Camel case 1ª palavra em mimúscula e a primeira letra das demais em maiúscula
+	Token -> plavras reservadas no JavaScript não pode ser utilizado como nomes da variáveis 
+	Usa o Camel case para não dar espaço no nome do arquivo
+	\n pula uma linha 
+
+Funções Aritméticas 
+	console.log("2" + "2"); -> contatena dois textos
+	console.log("10" / "2"); faz a conversão implicita
+	console.log("nome" / "2"); 
+	parseInt("2") -> transforma uma string em um número inteiro converte explicitamente
+	parseFloat(n) -> converte para ponto flutuante ex: console.log(parseFloat(5/3)); 
+	console.log("nome" / "2"); NaN (not a number) não é um número 
+	Ponto flutuante (float  - 4bits ou Double 8 bits) 
+	console.log(7/2); 
+	console.log(7.9); 
+
+Variaveis: São espaços na memória onde pode guardar um dado ou informação
+	const nome_variavel = valor; declarar uma variavel Constante - Não varia 
+	let none-variavel = valor; outro jeito de declarar uma variável pode variar 
+	bolleanas true ou false 
+Atribuição de Variaveis 
+	console.log(var1 + var2); 
+	console.log(var1 , var2); // uso especial da virgula adiciona um espaço  
+	console.log(var1 + " " + var2); contatenação com uma string vazia "" ou 
+	console.log(`Meu nome é ${var1} ${var2}`); 
+
+Listas São conjuntos de várias do mesmo tipo que representa a mesma coisa Array
+	const listaDeDestinos = new Array(
+    	`Salvador`, `São Paulo`, `Rio de Janeiro`, `Brasília`); Declaração do Array
+	listaDeDestinos.push("Curitiba"); -> adiciona outro elemento á lista após de criada Dinamicamente
+	listaDeDestinos.splice(2,1); Deleta um elelmento da lista no cado o de número 3, pois o vetor inicia em 0. 
+	console.log(listaDeDestinos[1]); Mostra um iten especísico de uma lista [1]
+
+Operadores lógicos ou operadores bolleanos (utilizadosem condições e loops) - returna true ou false
+	> maior que 
+	< menor que 
+	>= maior ou iagual que 
+	<= menor ou igual que 
+	== igualdade 
+	!= diferente 
+
+Operadores lógicos encadeados 
+
+
+condicionais -> Controla o fluxo do Código if/ else 
+	if (condição = verdadeira) {
+    		Executa o bloco 
+	}else (condição falsa {
+		Executa outro bloco 
+	}
+operadores lógicos
+	|| ou / or 
+	&& e / and 
+
+Encadeamento de if/ else 
+	Evitar usar muitas condicionais, pois podem resultar em erros 
+	 O resultado pode ser colocado em uma variavel 
+	if (idadeConprador >= 18) {
+    		listaDeDestinos.splice(1, 1);
+    		console.log("Compra Aprovada");
+	}
+	else {  ou juntos else if 
+    		if (estaAcompanhada) {
+        		console.log("Compra Aprovada, pois o comprador está acomapnhado");
+        		listaDeDestinos.splice(1, 1);
+    		}else {
+       			console.log("venda não aprovada ") 
+    		}
+	}
+
+Operacionais encadeados Retira a duplicação de código,pois as condições estão em um só lugar 
+	
+	Operador ou ||
+	if ((idadeConprador >=18) || (estaAcompanhada)) {
+    		listaDeDestinos.splice(2, 1);
+    		console.log("Compra Aprovada");
+	}else {
+    		console.log("venda não aprovada ")
+	}
+
+	Operador e &&
+	if (idadeConprador >18 && passagemComprada){
+    		console.log("Boa Viagem"); 
+	} else {
+    		console.log("Não autorizado a viajar "); 
+	}
+
+Laços de repetição 
+While -> repete o loop se a condição for verdadeira, necessita de uma váriavel de controle (contador) 
+para não entrar em loop infinito, por causa do contador nunca alcançar a condição de parada. 
+	let contador = 0; // inicialização do contador for do loop, pois a variaveis que são iniciadas
+		dentro deles só funciociona dentro dos mesmo
+	while(contador < 4 ){
+   	/* Bloco de código*/
+    	contador +=1;
+	}
+for -> repe em loop uma ação 
+	for(let contador = 0 ;contador < 4; contador ++ ){
+    		/* Bloco de código*/ 
+    		}
+    	contador +=1;
+	} 
+	estrutura do for: 
+		for (inicialização da variável; condição, incremento /decremento)
+
+Incremento ou decremento e sua variações (pode ser qualquer numero inteiro)
+	incrementando variáveis 
+		variavel = variavel + 1 = variavel +=; 
+		variavel = variavel - 1 = variavel -=;
+		variavel = variavel * 1 = variavel *=;
+	incrementando laços 
+		contador = contador + 1  = contador ++; 
+		contador = contador - 1  = contador --; 
+break -> encerra um loop saindo de dentro dele. 
+		
+		
+Sites externos 
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array	
