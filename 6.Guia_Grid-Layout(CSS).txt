@@ -1,0 +1,73 @@
+----------------------------------------------------------------------------------------------------
+						Guia de Css Grid Layout
+----------------------------------------------------------------------------------------------------	
+	
+	Serve para criar templetes mais organizados, pois define a área que cada elemento vai ocupar, 
+		além disso facilita na organização da página, pois permite definir seus respectivos lugares 
+			e simplifica o desenvolvimento do layout do site. 
+			Aplica no pai dos elementos, faz com que o mesmo se comporte como gride
+			Grid -> pode receber temples, colunas e linhas 
+		
+		.pai-dos-elementos{
+		
+	Layout básico da área
+    		background: #f1f1f1;
+    		display: grid;  -> aativa o grid layout 
+    		grid-template-areas: -> define as áreas da página 
+        		"área1"
+        		"área2"
+       			"área3";
+    		grid-template-columns: auto; -> define as colunas da página 
+    		grid-template-rows: 50px auto auto; -> define as linhas e seus respectvos tamanhos 
+			(podem ser definidas em %, vh, auto, px, vw e etc.)
+		}
+		
+		//referente a área1 
+		.cabecalho {
+    			background-color: green;
+    			grid-area: cabecalho; -> associa com as áres definidas no pai e repete nas demais 
+		}
+ 		
+		//referente a área2
+		.conteudo {
+    			background-color: red;
+    			grid-area: conteudo;
+    			height: 100vh;
+			}
+
+		//referente a área 3 
+		.rodape {
+    			background-color: blue;
+    			grid-area: rodape;
+			}	
+
+	Posicionando os elementos dentro da grid 
+			.classe (pai) {
+    				display: grid;
+				 grid-gap: .2rem; -> dá um espaçamento entre linhas e entre colunas
+    				grid-template-columns: 25% 25% 25% 25%; -> tamanho das colunas 4/100 = 25%
+    				grid-template-rows: 33.3% 33.3% 33.3%; -> tamanho das linhas 3/11 = 33.3%
+   				height: calc(100vh - 50px); -> retirando a diferencia do cabeçalho 
+			}
+			// separando a gride um maior (3/2) principal e os restante em secundários 1/1
+			classe__principal, .classe__secundario {
+   				background: center / cover no-repeat; 
+			}
+			.classe__principal { -> forma completa 
+    				background-image: url(../img/imagem.jpg);
+    				grid-column-start: 1;
+    				grid-column-end: 4;
+    				grid-row-start: 1;
+    				grid-row-end: 3;
+			}
+			.classe__secundario:nth-child(n) { -> forma reduzida
+    				background-image: url(../img/imagem2.jpg);
+    				grid-column: 4/4;
+    				grid-row: 1/1;
+			}
+
+		Definir a largura do elemento no grid
+			grid-template-rows: 175px auto; 
+		Ocultar elementos do grid
+        		grid-column: none; -> não exibe o elemento ue está na coluna 
+        		grid-row: none; -> não exibe o elemento ue está na linha
