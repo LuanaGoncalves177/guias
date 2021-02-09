@@ -1,0 +1,61 @@
+JavaScript DOM
+Dom é a repesentação do arquiv HTML em objetos, cada objeto representa um nó dele (tag ou texto)
+	window-> Documento-> html-> etc (Posssui um formato de árvore (estrutura de dados) para que possa encontrar com facilidade um elemento e usa a hierarquia(pai e filho)
+O navegador cria um objeto para cada tag do HTML 
+
+Document: reperenta a página atual, e permite acessar objetos do projeto 
+	possui metodos 
+	query.Selector("seletor"): buscar por seletores (tag, id, classe)
+	textContent: Pega apenas o testo da tag e pode alterá-lo
+		document.getElementById(‘id’) selecina o id 
+		document.getElementsByClassName(‘classe’) seleciona a classe 
+		document.getElementsByTagName(‘tag’) sseleciona a tag 
+		document.querySelectorAll(seletor) seleciona todos os seletores que tenham o mesmo nome 
+
+Arquivo JavaScript 
+	<script src="noneDoArquivo.js"></script> inserir um arquivo javaScripr colocar ao final do 
+		domento antes do fechamento do body 
+
+Criar uma função para não deixar o arquivo.js em escopo global
+	(()=> {   } )(); 
+
+Data Atribites: serve para identificar um elemento do Dom independente da classe.
+	data-nome no html
+	document.querySelector("[data-form-butto]") no javaScript
+ 
+Adicionando um evento à uma variavel com uma função anônima
+	novTarefa.addEventListener("click", function() {
+    		console.log("fui clicado")});
+ 
+Limpar o ecento padrão (enviar) do formulário
+	   evento.preventDefault(); 
+
+Pegar o valor o input 
+	  const valor = input.value; 
+
+Cria um parágrafo dinamicamente com JavaScript
+const tarefa = document.querySelector(`[data-task]`) ; 
+        const conteudo = `<p class= "content">${valor}</p>`; 
+        tarefa.innerHTML = conteudo; 
+
+Mamipulação do Dom com JavaScript 
+	const tarefa = document.createElement(`li`); criando um elemento no HTML
+        tarefa.classList.add(`task`); Adicionando a classe ao elemento 
+        const conteudo = `<p class= "content">${valor}</p>`;  // atribuindo um novo conteudo ao elemento 
+        tarefa.innerHTML = conteudo;  // inserindo no mundo HTML
+        list.appendChild(tarefa); // Colocando a tarefa no final do nó (um abaixo do outro) 
+Métodos de manipulação dos nós 
+	insertBefore(pai, filho): Coloca um nó antes do outro.
+	replaceChild( elemento1, elemento2): Substitui o nó elemento 1 pelo nó elemento2.
+	removeChild(elemento): Remove um nó da árvore.
+
+Métodos para saber quem está recebendo o evento 
+	const botaoConclui = evento.target; // saber o algo do evento 
+        const tarefaCompleta = botaoConclui.parentElement; // saber quem é o pai do elemento 
+        tarefaCompleta.classList.toggle(`done`); // aplicar o efeito no pai.
+	deletado.remove(); remobe o pai do elemento junto com ele.
+
+const BotaoDeletar = () => {} Componete começa com a letra Maiúscula
+Esportando os elementos com encapsulamento 
+	export default BotaoDeletar; exportando o botão 
+	 import BotaoConcluir from "./compomentes/concluiTarefa.js" importando o botão 
