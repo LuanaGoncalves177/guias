@@ -1,0 +1,108 @@
+---------------------------------------------------------------------------------------------------------------
+                                JavaScript Herança Interface e Orientação a Objetos 
+---------------------------------------------------------------------------------------------------------------
+Sites externos 
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array
+https://docs.npmjs.com/cli/v6/using-npm/scripts
+https://docs.npmjs.com/cli/v6/configuring-npm/package-json
+https://medium.com/@ethannam/javascripts-memory-model-7c972cd2c239
+
+ctrl + alt altera varias linhas 
+ctrl + espaço: abre os atributos de uma função fo JavaScript
+
+Orientação a Objetos com Java Script
+Tipos primitivos: Saõ os valores mais simples que uma linguagem de programação pode trabalhar 
+	String (texto)
+	Number (número)
+	Boolean (true/false)
+	Null (Não atribui nemum  valor ao espçao de mmemória -e intensional)
+	undefined (valor padão se não for iniciado ou esquecido de ser atribuido)
+	Symbol
+
+Classe é utilizada como um molde de uma estrutura que será replicada 
+	As variaveis que compoem a classe são chamdos de atributos 
+	class Cliente {
+   		/* atributos da classe cliente */ 
+	}
+	const cliente1 = new Cliente(); instaciando ou criando um novo objeto do tipo cliente 
+	cliente1.atributo = "Ricardo"; 	Dando um valor para um atrivuto do objeto criado 
+	console.log(cliente1); lendo os atributos do objeto cliente1 
+	console.log(cliente1); 
+	new -> cria um novo objeto
+	Deve-se criar uma classe por arquivo visando às boas práticas 
+	export-> exporta os atributos da classe para outra 
+	composição de classes: permite que os objetos de uma clsse deja composta à outra. 
+		contaCorrenteCliente2.cliente = cliente2; 
+ 
+Métodos-> são funções que são atribuidas ás classe para elas poderem realizar uma operação 
+	 sacar(valor) {
+        	if(this.saldo >= valor){
+            	this.saldo -=valor; 
+        	}
+    	}
+	this -> serve para indentificar qual é a conta que está sendo utilizada
+	# torna o atributo privado a classe ou pela versão antiga usutilizar o _ (underline)
+	early return ou retorno cedo, verifica as condição necessárias tes de fazer a operação 
+		if (valor <= 0) return;  // eary return 
+
+Métodos Getters e Setters Encapsulamento: Deixa os atributos da classe privada a ela, ou seja, 
+		Não permite ser acessado dora da mesma, sem o auxílio dos seus respectivos 
+		acessores. São objetos dentros de outro
+	 _cliente; 
+    	//acessores do cliente
+    	set cliente(novoCliente){ // permite que a classe receba o objeto internamente
+        	if(novoCliente instanceof Cliente) {
+            	this._cliente = novoCliente ;
+        	}   
+    	} // permite que a classe 
+    	get cliente(){ // permite exibir no index
+        	return this._cliente; 
+    	}
+	instanceof: garante que o objeto recebido é do tipo esperado 
+	sem o return fica indefinido(undefined)
+	this: é específico do objeto e não da classe 
+
+Tipo de objetos 
+	Valor -> altera o objeto 
+	Referência -> é uma cópia, pois não altera o objrto
+
+
+Terminal do Vs Code criação do package,jason 
+	package.json é oarquivo de confoguração que tem como objetivo estipular e configuar as depedêncais
+		 do seu projetos e definir quais os pacotes serão executados.  
+	ctrl j abre o terminal do vs Code
+	npm init -> criar um novo pacote (NPM – Node package manager.)
+	Nomear o pacote criado e confirmar as proximas etapas conforme for necessário
+	Dentro do json adicionar o Type ->  "type": "module"
+	
+Criando uma conta junto com o Cliente bão é muito recomendado devido às boas práticas é melhor instanciar 
+		separado. 
+	const contaCorrenteCliente2 = new ContaCorrente(); 
+	contaCorrenteCliente2.cliente = new Cliente();
+	contaCorrenteCliente2.cliente.nome = "Alice" 
+	contaCorrenteCliente2.cliente.cpf = 4215321047; 
+	contaCorrenteCliente2.agencia = 1012; 
+
+Constrututores	
+	função que recebe os atributos necessário para instancias/criar um objeto e não permite a sua alteração
+	const cliente2 = new Cliente("Alice",4215321047) //index
+	 constructor(nome,cpf){ // classe cliente 
+        	this.nome = nome; 
+        	this._cpf = cpf; 
+   	 }
+	static: reflete a alteração em todos os objetos da classe e pertence somente a ela 
+		static numeroDecontas = 0; variavel da classe 
+		console.log(ContaCorrente.numeroDecontas); // chamada do index 
+
+Herança 
+	extends: Faz uma classe herdar os seus metodos e atributos de outra 
+		export class ContaCorrente extends Conta {--/---}
+		para chamar a classe mãe é necessário chamar o seu construtor dentra da classe filha 
+		super(0, cliente, agencia); faz referencia a classe (mãe) extendida  
+		sobreescrita: acontece uando a classe filha sobrescreve o metodo da classe mãe sem chama-lo
+Classe abstrata só funciona se for instanciada por uma des suas filhas e não pode ser acessada diretamente
+	Não importar outra classe nela 
+Colocar um errro para parar a execução do programa 
+	 throw new Error("mensagem de erro");
+Métodos abstratos: Não possui código, por isso não fazem nada servem apenas para ser sobrescrito
+Polimorfismo: Usar um mesmo método para vários objetos distintos 
