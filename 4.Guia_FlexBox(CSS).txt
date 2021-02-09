@@ -1,0 +1,69 @@
+----------------------------------------------------------------------------------------------------------------
+	 				Guia Flexbox Css (caixa - Flex) 
+----------------------------------------------------------------------------------------------------------------
+	Display: inline; não pertime definir nem largura nem altura para o elemento 
+	Flex é colocado no "pai do elemento" Flex container -> contem diversos itens dentro dele
+	Flex itens -> elementos de dentro 
+	.pai {
+  		display: flex;
+	}
+	
+    	display:flex; -> Ativa o flexbox 
+    	align-items: center; -> alinha os "filhos" elementos ao centro na vertical (altera o eixo y)
+    		align-items: initial; -> volta para a posição inicial
+	justify-content: space-between; -> coloca um espaço entre eles (altera o eixo x)
+    		justify-content: space-around; -> coloca espaço ao redor dos elementos uniformente 
+    		justify-content: flex-end; -> joga o conteúdo para a direita 
+    		justify-content: flex-start; (padrão) Joja o conteudo para a esquerda 
+    	flex-direction: column; -> alinha os elementos em colunas (o y passa a ser o principal)
+    		flex-direction: row; -> alinha os elementos em linhas (muda os eixos)
+    		flex-wrap: wrap; Quebra para a próxima coluna 
+		flex-wrap: nowrap; -> Remove a quebra de linha 
+    		flex-flow: column wrap; -> substitui a flex-direction: column; +  flex-wrap: wrap
+	order: 0; é o padrão do flexbox é aplicado no fillho e não no pai 
+		order:-1; Coloca o elemento selecionado no topo da lista de elementos sem mexer no HTML
+	flex-grow: 1; -> aumenta o objeto fazendo-o crescer para alcançar todo o espaço, caso tenha 
+			mais de um o navegador vai divir o espaço respeitando o grow de cada um deles
+		flex-grow: 0; -> É o padrão dos elementos não cresce 
+	flex-shrink: 2;-> dimuni o elementento em 2x mais divide igual e tira do tamanho do elemento 
+		flex-shrink: 0; -> Não altera o elemento
+		flex-shrink: 1; -> è o padrão dos elementos 
+	flex: 1: cada um dos filhos tem o mesmo tamanho, pode ser diferente  
+		flex: 1 1: -> aceita os dois (grow e shrink) 
+	flex-basis: 25%; -> Valor absoluto, tem mais prioridade é semelhante(equivale) a largura (width: 50%).
+		Combinar as probriedades: 
+		A propriedade é a propriedade flex.
+  			flex: 1 1 300px;
+			A ordem dos valores é:
+			flex-grow, flex-shrink, flex-basis.
+	Wrap-Reverse -> inverte a ordem das linhas 
+		.conteudoPrincipal-cursos {
+  		display: flex;
+  		flex-wrap: wrap-reverse;
+		}
+	Flex-Direction: Column-reverse: inverte a ordem dos elemenos nas linha
+		.conteudoPrincipal-cursos {
+  		display: flex;
+  		flex-wrap: wrap;
+  		flex-direction: row-reverse;
+		}
+	flex item: align-self: -> alinha o elemento individualmente
+
+	container:
+		display: flex
+		flex-direction
+		justify-content
+		flex-wrap
+		flex-flow
+		align-items
+		align-content
+
+	flex item:
+		order
+		flex-grow
+		flex-shrink
+		flex-basis
+		flex
+		align-self
+
+		
