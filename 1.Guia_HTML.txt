@@ -1,0 +1,206 @@
+---------------------------------------------------------------------------------------------------------------
+					Guia de HTML
+---------------------------------------------------------------------------------------------------------------
+	Caracteristicas do HTML
+	
+	É uma linguagem e programação responsável pela criação da estrutura da página
+	Usa tags (marcações) entre <> (abre a tag) </> (fecha a tag)
+	Id vs class 
+	d é o identificador único de uma tag, só usa uma vez 
+	Ex: <img id = “foto-do-joao” >
+	Class é o identificador que pode ser reutilizado quantas vezes for necessária
+	Ex: <img class = “fotos-do-perfil”>
+	Estrutura Básica do HTML 	
+
+			TAGs (etiquetas)
+	TAGs do documento HTML 
+		<html>...</html> - tag para iniciar um documento Html 
+
+		Head(metadados da página para o navegador)
+		<head>...</head> - cabeçalho que recebe os parâmetros para o navegador (dentro de html). 
+			<meta  charset = “UtF-8”> Biblioteca de linguagem ocidental 
+			Title(Título) 
+			<title>...</title> dá título à página no navegador. 
+
+	Body(corpo da página)
+		<body>...</body> - corpo do documento (dentro de html).
+
+	Estrutura básica do HTMLS
+		<!DOCTYPE html>
+			<html lang="pt-br">
+			<head>
+    				<meta charset="UTF-8">
+    				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    				<title>Documento</title>
+			</head>
+			<body>
+    				Conteudo da página que será exibido para o usuário 
+			</body>
+			</html>
+
+	Main iv para o conteúdo principal 
+		<main> -> conteúdo principal da página</main>
+	lang: é a biblioteca da página e pode ser usado fora do html caso tenha uma frase em outro idioma
+	Header
+		<header>...</header> Cabeçalho da página que fica no body 
+	Links
+		<link rel = "Stylesheet" href = style.css> Adiciona a folha de estilo á página
+		<link rel="preconnect" href="https://fonts.gstatic.com"> Adiciona fontes externa á página. 
+		<link rel = "icon" href = "imagem.png"> -> Adiciona imagens no título da página 
+
+	Adicionar Copyright e outros símbulos 
+		<p class = "copyright">&copy;Copyright 2019</p> paragráfo com o copyright 
+
+	
+	Parágrafos e seus respectivos Atributos 
+		<p>...<p> Adiciona parágrafos 
+			<em>...</em> ênfase ou itálico no parágrafo 
+			<strong>...<strong> Ativa o negrito no parágrafo
+			<sub>...</sub> Adiciona texto abaixo da letra 
+			<sup>...</sup> Adiciona texto acima da letra (potenciação) 
+			<abbr title = “Superior Tribunal de Justiça” >STJ</abbr> Adiciona siglas e ao toque do mouse mostra o seu significado.
+			<p>lorem*2</p> Coloca um texto para criar conte[udo 
+
+	Citações 
+		<cite>...<cite> adiciona citação a página
+
+	Bloquotes Blocos para citações 
+		<blockquote> 
+			<p>pagragrafo da citação</p>
+			cite>autor da citação</cite>
+		</blockquote>
+ 
+	Spans (Não tem semantica e não é parágrafo) 
+		<span>...</span> Coloca texto, fórmulas na página> 
+
+	Estruturadores de páginas 
+		<br> Quebra a linha no navegador>
+		<hr> Adiciona linha ná página>
+ 
+	Títulos, Subtitulos e Tópicos 
+		<h1>...</h1> Título principal da página só existe uma Tag 
+		<h2>...</h2> título secundário da página  
+		<h3>...</h3> Tópico da página
+		<h4>...</h4> Tópico 
+		<h5>...</h5> penúltimo tópico 
+		<h6>...</h6> último tópico. 
+
+	Seções, Divs e Articles formam o Body 
+		<section>...</section> Cria seções á página 
+		<div>...</div> Cia divisões na página (div.class) atalho
+		<asile> faz referencia ao conteúdo principal o complementando </asile>
+		<time datetime="2014-07-13">13 de julho de 2014</time> -> tag para colocar a data 
+
+	Rodapé (final da página 
+		<footer>...</footer> Cria o rodapé da página
+
+	Navegadores de páginas 
+		<nav>...</nav> cria um menu de navegação na página (pode ser usado com ul ou ol). 
+			target = "blank" -> abre uma página em branco 
+
+	Lista ordernas(ol) e não ordenadas(ul) 
+		<ul>...</ul> Cria uma lista não ordenada de elementos. 
+		<ol>...<ol> Cria uma lista ordenada de elementos. 
+
+	Itens das listas 
+ 		<li>...</li> itens dos elementos da lista (ol e ul) 
+
+	Inserir imagens e legendas 
+		<img src = “nome_da_imagem.Extensão”> importa uma imagem 
+		<figure></figure> -> bloco para inserir imagens 
+		<figcaption></figcaption> -> insere uma legenda na imagem
+
+
+	Inserir vídeos
+		<iframe width="100%" height="315" src=" internet ou aruivo.extensão " frameborder="0" allow="accelerometer; 
+		autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> adiciona videos locais e da internet 
+	
+	Inserir documentos ou comando em Java-Script
+		<script>…</script> Adiciona arquivos ou comandos em Java-Script
+	
+	Âncoras (links para outras páginas não herda a cor do seu elemento pai por padrão)
+		<a>www.google.com.br</a> Adiciona um link para um arquivo ou página da web.
+		<a href="#" data-legenda="Clique em mim">Link</a> <!-- a declaração abaixo é válida a partir do HTML 5 -->
+
+	Criar tabelas e seus elementos 
+		<table> ...</table> Cria uma tabela 
+			<thead></thead> cabeçalho da tabela 
+				<th></th> serie que faz parte do rótulo
+			<tbody></tbody> Corpo da tabela 
+				<tr>...</tr> linhas
+				<td>...<td> Colunas 
+			<tfoot></tfoot> rodapé da tabela 
+			wowspan e colspan -> permite ue uma celula ocupe mais de uma linha ou coluna 
+	Características de um mesmo item 
+			<dl></dl> -> descreve um único iten, detalahndo as suas caracteristicas 
+	Formulários 
+		<form>..<form> 
+			<label for ="nomesobrenome">Nome e Sobrenome:</label> Adicriona um texto para entrada de dados 
+			<input type ="text" id = "nomesobrenome" class = "input-padrao" required > Recebe os dados inseridos.
+				 A tag input não permite a criação de filhos 
+			<label for = "mensagem">Mensagem</label> outro label 
+			<textarea cols = "70" rows= "10" id ="mensagem"  class = "input-padrao"></textarea required> Área para a escrita da mensagem 
+			<fieldset>…</fieldset> agrupa componetes do formulário são parecidos
+			<legend>Como prefere o nosso contato?</legend> titulo <label for = "radio-email"> 
+				<input type = "radio" name = "contato" value = "email"id = "radio-email">Email</label> opção já preenchida 
+			<select>…</select> habilita uma menu com várias opções para selecionar 
+			<option>Manhã</option> opções do menu 
+			<label class = "checkbox"><input type ="checkbox" checked >Gostaria de receber nossas novidades por email?</label> Botão 
+			<input type = "submit" value ="Enviar Formulário"  class = "enviar" >
+			<button type="submit">Enviar</button> -> adiciona um botão (outra forma)
+			<form>
+    				<label for="nome">Nome:</label>
+    				<input id="nome">
+    				<label for="email">Email:</label>
+    				<input id="email">
+
+    				<input type="radio" id="consultoria">
+    				<label for="consultoria">Consultoria</label>
+				</form>
+
+			ou 	O input dentro do label 
+				<label>
+    					<input type="radio">
+    					Consultoria
+				</label>
+
+		Formulário com semantica e validações com o css 5 
+		alidações agrega semantica e usalibilidade 
+			Foco do teclado automático no campo "Nome" assim que a página carregar.
+			Obrigatoriedade de preencher os campos "Nome" e "E-mail".
+			Mensagens explicativas sobre os campos "E-mail" e "Mensagem".
+			
+			<fieldset>
+    				<legend>Dados pessoais</legend>
+    				<label for="nome">Nome:</label>
+    				<input id="nome" name="nome" placeholder="Seu nome aqui" autofocus>
+    				<label for="email">Email:</label>
+    				<input id="email" name="e-mail" placeholder="seu@email.com" type="email"required>
+			</fieldset>
+
+			<fieldset>
+    				<legend>Assunto:</legend>
+    				<label>
+        			<input type="radio" name="assunto" value="consult"> Consultoria</label>
+    				<label>
+        			<input type="radio" name="assunto" value="blog">Blog</label>
+    				<label>
+        			<input type="radio" name="assunto" value="outro">Outro</label>
+			</fieldset>
+		Select 
+			<select name="assunto">
+    				<option value="blog">Blog</option>
+    				<option value="servico">Serviço</option>
+    				<option value="outro">Outro</option>
+			</select>
+		Parttern
+			<input pattern="[A-Za-z0-9]*"> Com esse padrão, agora nosso usuário precisa digitar pelo menos 8 letras ou números para a entrada ser válida
+			<input id="nome" type="text" name="nome" required autofocus pattern="[A-Za-z ']"> Permite ue o usuário coloque apenas letras e espaços 
+			<input id="nome" type="text" name="nome" required autofocus pattern="[A-Za-z ']{4,}"> permite ue o usuário coloque até 4 numeros 
+			<input pattern="[0-9]*" title="Preencha somente com números">
+			<input id="nome" type="text" name="nome"required autofocus pattern="[A-Za-z ']{4,}" title="O nome precisa ter pelo menos 4 caracteres">
+		
+	
+	Identificadores (utilizados nas tags) 
+		id -< serve para nomear elementos da página (não pode ser repetido) seletor # no css
+		class serve para nomear elementos e pode se reperit seletor . (ponto) no cs = flexivilidade
