@@ -1,0 +1,339 @@
+---------------------------------------------------------------------------------------------------------------
+					CSS
+---------------------------------------------------------------------------------------------------------------
+	Caracteristicas do Css
+		Usada com as tag do HTML classes ou ids
+
+	Seleções no Css
+		main h1 -> pega o h1 que estiver dentro da tag main 
+		h1,h2 -> seleciona duas ou mais tags 
+		.class h2 -> seleciona o h2 que estiver dentro da classe 
+
+	Seletores do Css
+		|~(til> seleciona elementos que estão depois de outros elementos 
+		|text-indent: 4ch: indenta os parágrafos 
+		|+ seleciona um elemento logo depois de outro 
+		|div > p <seleciona o pai e filho
+		(Trabalhar com classe é a melhor alternativa)
+		. Seleciona classes 
+		# seleciona Ids
+		* -> Seletor universal 
+
+	Medidas relativas 
+		% -> porcentagem -> aumenta os elementos de cordo com um tamanho já definido no Body ex font-size 120% 
+		A porcentagem de largura de um elelemento filho é sempre relacionada a do pai 
+		rem -> equivale a 16px rquivale ou a fonte padrão do navegador (pode ser alterado pelo usuário)
+		em -> segue o rem como base o tmamanho da fonte do elelemento
+		ch -> largura da fonte em relação ao primeiro caracter da mesma 
+		vh -> vertical Heights -> altura vertical da área do elemento (visivel)
+		px(pixels) não é resonsível
+
+	Reset básico do Css 
+		* { /* reset básico*/
+    		margin: 0; 
+    		padding: 0;
+    		box-sizing: border-box;
+		}
+
+	Importações no Css 
+		@import url('https://fonts.googleapis.com/...'); uma fonte do google fonts 
+	
+	Pseudoclasses Classes que o navegador coloca automaticamento utilizando a estrutua do HTML
+		:nth-child(odd/even/2n+1- impares 2n Par) -> Selecionar elementos especisicos da página e elementos aceita funções
+		tr:nth-child(odd) pega os filhos impares da tabela 
+		=! tr :first-child -> seleciona os termos independente 
+		table:nth-child(odd)igual a de cima
+		:first-child -> seleciona o primeiro elemento de cada container 
+		:last-child -> seleciona o último elemento de cada container 
+		bloquequote:nth-of-type(even) seleciona todos os elementos da classe blockquote (pares)
+		:hover -> coloca um efeito no objeto que está com o mmouse encina dele 
+		:active -> Quando clica no objeto 
+		:focus -> O tela está com foco em um campo de formulário 
+		:ckecked -> 
+		Combinando mais de uma pseudoclasses
+			HTML
+			.icones-redes-sociais a {
+    				position: relative;
+			}
+	
+
+			.icones-redes-sociais a:hover::after, 
+			.icones-redes-sociais a:focus::after {
+    			ontent: attr(data-tooltip);
+    			position: absolute;
+    			top: 100%;
+    			right: 0;
+    			text-indent: 0;
+    			width: 300%;
+    			background: black;
+    			font-size: .75em;
+			}
+
+	Pseudoselementos-> São elementos que são criados pelo próprio navegador apenas decorativo 
+		deixando o html limpo. 
+		p:first-letter{} permite alterar a primeira letra e alterá-la ou p::fist-letter
+		p:before { content: '"'}
+		p:after {content: 'pseudoelemento'}
+
+	 Seletores de media Querys -Ferramentas usada para design responsivo para Design Responsivo
+		As propiedades que foram ser alteradas por elas dentro dela deve-se ser retirada do código do 
+		seu respectivo seletor css vai para o mair valor.
+			@media(max-width:768px) {} -> reescreve o códido para largura inferior 
+			@media(min-width:768px) {} -> reescreve o código para largura superor 
+		Alterar a largura e a tela
+			@media screen and (min-width:0){} -> seletor para telas pequenas
+			@media screen and (min-width:768px) {} -> seletores para telas de tablets 
+			@media screen and (min-width: 992px){} -> telas maiores Desktops antigos 
+			@media screen and (min-width: 1200px){} -> telas maiores Desktops mais modernos
+
+	Transform
+		Transforme: Altera um elemento na página 
+		transform: rotate(30deg);	Rotaciona o objeto na página 
+		transform: scale(1.5);	Altera a escala do objeto 
+		transform: skew(20deg);	entorta um pouco para cauda um dos lados
+		transform: traslate (10px,50px)	Muda o objeto de lugar 
+		transform: translate(-50%,-50%);	calcula do centro do elemento
+		overflow: scroll 	coloca barra de rolagem nos elementos
+		transform: scale(1.2) rotate(5deg)
+		opacity .5;	Adiciona opacidade ao elemento 
+
+	Trasições nos elementos: 
+		transition: 300ms;	Aplica uma transição com a medida em milissegundos 
+		
+
+	Alterações na fonte de Textos (h1, H2, H3, H4, H5, H6, p span, cite etc) 
+		font-size: Muda o tamanho da fonte pixel(px)
+		font-family: muda o tipo da fonte
+		font-weight: bold; -> coloca a fonte em negrito  
+		font-style: italic; -> altera o estilo da fonte
+ 
+	Alterações na cor da fonte 
+		color: Muda a cor da fonte 
+			color: inherit -> herda a cor estabelecida anteriormente
+
+	Alterações no texto  
+		Text-align:<atributo> muda o local do texto pode ser direira, esquerda, 
+			justificado e centralizado sans-serif: sem serifa ou serif: com serifa
+		text-Decoration -> decoração do texto 
+			nome -> menhum 
+			underlie -> sublinhado
+		line-height: 1.5; aumenta o espaçamentos entre as linhas do parágrafo
+   		text-transform: : altera o visual do texto 
+			uppercase -> em letra maíscula 
+			lowercase -> em letra minúscula
+		text-indent: 1000PX; move o icone na horizontal
+		text-shadow: 2px 2px #000; -> Adiciona uma sombra ao texto 
+
+	Margin adiciona espaçamento externos
+		margin-top -> margim superior 
+		margin-left -> margin da esquerda 
+		margin-right -> margem da direita 
+		margin-bottom -> margin inferior e etc  
+		auto -> caucula o espaçamento automático ex: margin-left: auto; 
+		margin: 0 auto; Centraliza os elementos 
+
+	Padding adiciona espalamento interno no elemento. 
+		padding-bottom -> espaço na parte de baixo. 
+		(aceita os atributos de margin) ex: padding-left -> adiciona só á esquerda 
+
+	Border coloca borda nos elementos 
+		border 10px:(tamanho) solid(tipo) #F1D2D3(cor); -> desenha a borda 
+		tipo solid (sólido) trash (traçado) dots(pontos) 
+		border-width -> aumenta ou diminue a largura da dorda 
+		Alterando as cores individuais das bordas
+		border: 10px solid #C2CCCA;
+    		border-bottom-color: #333;
+    		border-right-color: #FFF;
+    		border-left: transparent;-> deixa da dor de fundo do elemento 
+		border-radius: 10px;	Arredonda as bordas 
+		border-radius: <raios na horizontal> / <raios na vertical>;	
+			Arrendonda os cantos de formas diferentes 
+		border-radius: 100% arredonda a imagem por completo.
+	Largura e Altura
+		width:300px -> muda a largura dos elementos
+		max-width: 1066px; -> Adiciona a largura máxima ao elemento 
+		max-width: 1066px; + margin: auto; -> Centraliza de acordo com a página do navegador 
+		height: 700px;	-> Adiciona a altura do elemento 
+		max-height: 100; -> Adiciona a altura máxima ao elemento 
+		Altura(width) Define a altura da página do site 
+		height: auto; -> O navegador calcula a altura automaticamente
+
+	Definindo o tanho da caixa 
+		box-sizing -> Determina o tamanho da caixa 
+		border-box: pelas bordas 
+		border padding pelo padding 
+		content-box -> pelo conteúdo 
+
+	Alterações nas listas 
+		list-style-type:none; retira os marcadores das listas e o centraliza
+
+	Display: permite definir se o elemento vai empinhar (block) ou não (inline-block) 
+		display: permite alterar o padragão da tag 
+			block -> empilha e parece 
+			inline -> coloca em linha um do lado do outro 
+			inline-block -> mantém o link do tamanho original
+			none -> o elemento desaparece completamente 
+			Obs: Imagem e span são inline, ou seja, ficam em sequência 
+
+	Alterações em imagens
+		Troca o texto do HTMl por uma imagem de fundo no html usando 
+		{deixa o texto tranparent e mantem o link na imagem
+ 			margin: 2px; 
+    			color: transparent;  
+    			font-size: 0px; 
+    			width: 40px;
+    			height: 40px;
+   			display: inline-block;}
+		ou { desloca o texto, mas mantém o link na imagem 
+ 			margin: 2px;
+    			color: inherit; /*herda de ul*/ 
+    			font-size: 25px;   
+    			width: 40px;
+   	 		height: 40px;
+    			display: inline-block;
+    			text-indent: -9999px;}
+		filter:blur(30px);	Aplica um filtro que borra a imagem 
+
+	Floats e Clear 
+		Float permite tirar um elemento do fluxo para flutuar ao redr do conteúdo, 
+		floats em sequencia formam uma linha.
+			float:left; esquerda 
+			float:rigth; direita 
+		Clear limpa o float em uma determinada posição(left ou right) 
+			clear: right -> limpa á direita 
+			clear: left -> limpa á esquerda
+			clear: both; -> limpa Ambos(both) os lados ou a classe clearfix
+	Posições no Css 
+		position -> desloca um elemento na página 
+			position: relative -> mamtem o fluxo da página 
+			position: absolute -> é relativo á janela do navegador 
+				atributos - ( top, left right, e bottom) fixed (deixa o elemento fixo em relação da tela
+				z-index: -1;	coloca camadas nos elementos com relative ou absolute)
+	
+	Visibilidade 
+		visibility: hidden: tira a visibilidade, mas não some com o objeto
+	Sombras nos elementos: 
+		Box-shadow: 0 4px 4px black;	Adiciona sombra a Caixa
+		box-shadow: 0 0 1em #000, inset 0 0 .5em #fff;	coloca uma sombra por dentro e outra por fora
+
+	Background (fundo da Tela) 
+		bacground-color: Muda a cor de fundo da pagina ou tag do elemento 
+		background-image: url(../imagens/github.png); colar uma imagem de uma pasta
+		Background-image: linear-gradient(to bottom. #F00. #888 80%, #000);
+		backgroundsize: 100% 200px;  -> Define o tamanho do background 
+			 background-position: 40%;	define a posição inicial, relativa a posição de 
+				fundo na camada definido por background-origin
+		background: no-repeat: -> tira a repetição 
+		background-attachment: fixed; -> coloca na página toda 
+		background-position: 50% 50%; -> define a posição do background 
+		background-image: radial-gradient(yellow, red);
+		background-image: radial-gradient(circle at bottom left, yellow, red);
+		background-image: radial-gradient(ellipse at left bottom,
+    			rgba(60, 29, 61, 0.8),
+    			rgba(60, 29, 61, 0.8) 65%,
+    			black 65%,
+    			black 70%,
+    			transparent 70%,
+    			transparent);
+		Background-Collor black ou FFFFFF(hex) cor de fundo 
+		background: url("bg.jpg"); colocar uma imagem de fundo 
+
+	Background - Atalho no Css
+		.class__item{
+    			background: url('../../img/banner.jpg') no-repeat center / cover;
+		}
+	
+	Sinais e símbulos 
+		&copy -> colocar o simbulo de copyright e o & usasado para adicionar outro símbulos
+	
+	Calculos com o Css
+		Vantagens(legibilidade, poder (não presisar mais do javascript para isso) flexbilidade.
+		O Css possiblita o calculo através da função Calc 
+		main {
+    			width: calc(100% - 0.9 * 300px);
+    			... pega o tamnho total da tela e multipica por 9/10 da imagem com 300px
+		}
+	Colocando imagens no label por pseudoelementos 
+			label[for="nome"] {
+    			position: relative;
+		}
+
+			label[for="nome"]:after {
+    			content: "";
+    			background-color: #666;
+    			background-repeat: no-repeat;
+    			background-image: [o destino da imagem aqui]
+    			background-size: 50% 50%;
+    			width: 2em;
+    			height: 2em;
+    			background-position: center;
+    			position: absolute;
+    			top: 100%;
+    			left:0;
+		}
+
+		#nome {
+    			width: calc(100% - 2em);
+    			position: relative;
+    			left: 2em;
+		}
+
+	Tabelas no css
+		table {
+    			border-collapse: separate; -> separa as células 
+    			border-spacing: 5px; -> espaça as células 
+			}
+		colspan e rowspan no Css 
+			.habilidades [colspan] { (coluna)
+    				text-align: center;
+    				font-style: italic;
+				}
+			.habilidades [rowspan] { (linha)
+    				vertical-align: middle;
+				}
+	Transições e animações 
+		Transition -> serve para fazer transições graduais, usa o nome da propriedade e não o seu conteúdo 
+			.classe-nome {
+    				...
+    			transition: transform 1s, box-shadow 2s;
+			}
+			transition-deley:0s, 1s ; permite configurar uma demora para o inicio da transição
+			para cada uma.  
+			tipo de suavização: linear (nenhuma) com ease-in (começo) ease-out (final), 
+				ou ease-in-out (nos dois).
+		
+		Animation -> permite fazer animação indepedente da interação do usuário com a página 
+			
+			h1 {
+    				animation: nome 2s;
+			}
+
+			@keyframes nome {    Permite especificar o qe acontece a cada frame da aminação
+    				0% {
+        				opacity: 0;
+    				}
+    				100% {
+       					 opacity: 1;
+    				}
+			}
+			.class {
+    				...
+    				position: relative;
+    				animation: nome2 1s infinite; -> repete infinitivamente 
+    				animation-direction: alternate; -> altera de 1 a 0 
+    				animation-timing-function: ease-in;
+			}
+			@keyframes nome2 {
+    				from {
+        				top: 0;
+    				}
+    				to {
+        				top: 1 em;
+    					}
+				}
+			animation-play-state: paused; -> pausa a animação 
+			animation-fill-mode: backwards; -> Essa propriedade nos permite fazer com que o 
+				navegador aplique o estilo inicial de uma animação antes mesmo de ela 
+				começar (valor backwards)
+			animation-fill-mode: forwards; -> após terminar executar ou 
+			animation-fill-mode: both; -> Faz as duas coisas ao mesmo tempo 
