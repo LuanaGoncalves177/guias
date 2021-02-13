@@ -1,0 +1,41 @@
+JavaScript na web Armazenamento de Dados no Navegador
+
+Armazenamentos de dados no Navegador 
+	Armazena dados enquanto o navegador está em execução 
+ 		sessionStorage.setItem(`tarefas`,JSON.stringify(dados)); // recebe uma strig e um json com os dados 
+	Armazena os daos independente do navegador 
+		 localStorage.setItem(`tarefas`,JSON.stringify(dados)); // converte os objeto em string 
+	Acessar os dados do localStorage 
+		const tarefas = localStorage.getItem(`tarefas`); // passando a chave - string e o objeto
+		const tarefas = JSON.parse(localStorage.getItem(`tarefas`)) ; // reconvertendo em objeto
+	
+	Verifica se a tarefa foi feito no dia 
+		const dia = moment(tarefa.dataFormatada, "DD/MM/YYYY"); 
+        	const diff = dataMoment.diff(dia); 
+        	if (diff === 0){
+           	dataTop.appendChild(Tarefa(tarefa))
+        	}
+
+	Remove as datas repetidas 
+		datas.forEach(data => {
+    	if(datasUnicas.indexOf(data.dataFormatada) === -1){
+        	datasUnicas.push(data.dataFormatada);   
+    	}
+	Ordena as datas 
+		data.sort((a, b) => {
+        	const primeiraData = moment(a,"DD/MM/YYYY").format('YYYYMMDD'); 
+       		const segundaData = moment(b,"DD/MM/YYYY").format('YYYYMMDD'); 
+        	return primeiraData - segundaData; 
+    		})
+
+	remover do LocalStorage 
+		const tarefasCadastradas = JSON.parse(localStorage.getItem('tarefas')); //pegar os itens do localStorage 
+    		tarefasCadastradas.splice(index, 1) // remover os itens dele 
+    		localStorage.setItem('tarefas',JSON.stringify(tarefasCadastradas)) // enviar as alterações para ele
+indexOf faz a verificação de itens repetidos 
+
+Arquivos externos 
+https://developer.mozilla.org/pt-BR/docs/Aprender/JavaScript/Client-side_web_APIs/Introdu%C3%A7%C3%A3o
+https://developer.mozilla.org/pt-BR/docs/Web/API/Storage
+
+Toda vez que for adicionar uma nova funcionalidade ao código é uma boa prátiva refatorá-lo (dividir em módulos 
