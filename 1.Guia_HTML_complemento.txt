@@ -1,0 +1,165 @@
+HTMl 
+baixar o html previu no vs code 
+ctrl shif p dig- preview e abir o open preview
+
+Hypertext Market Language (linguagem de marcação de texto) 
+	semântica 
+	sintaxe 
+	hipertexto -> texto com linkes, imagens. videos etc 
+<!-- Adicionar um comementário no código não aparece na página HTML--> 
+Markup -> tags no HTML marca o texto 
+	Anatonia das tags
+		Abertura de tag <tag>
+		fechamento de tag </tag>
+		Conteudo isso é uma tag HTML
+		Elementos <tag>isso é uma tag HTML</tag>
+		elementos vazios  img, input não tem fechamento
+
+Atributos  
+	Atributos HTML (informações extras configurações)
+		img 
+			src="caminho da imagem e extensão"
+			alt="Texto alternativo da imagem"
+		atributos booleanos - Não precisam de conteúdo valor (V/F)
+			disable -> Desabilita a tag 
+		Aspas (omissão (não é recomedável), simples '' duplas ""
+	Atubutos Globais são apicados a todos as tags
+		Class -> aplicar estilo css e acesso no javaScript ex: class = "carinho" 
+		Contenteditable permite editar o conteudo de uma tag perde a mdificação é perdida contenteeditable="true
+		data-qualquer-nome="" utilizado no JavaScript e Css ex data-id=""
+		hidden esconde um tag <div class "carrinho" hidden></div>
+		id -> único por página ex id="tal"
+		style aplica estilização no próprio HTML style="color: blue">
+		tabindex -> segue o numero do index ex tabindex="1-9"; 
+		title -> definir um título 
+
+Alinhamento e Hierarquia no HTML 
+	Alinhamento de tags (tag dentro da outro) 
+		Fluxo (cada tag é lida de abaixo do outro)
+		Hieraquia (uma tag filha da outra anterior)
+		Posicionamento dos elementos( algumas tagas ficam em linha em, strong, a e etc)
+		<br> serve para quebrar a linha dentro de um barágrafo
+		<em> enfase 
+		<strong> inportância 
+		<b> bold serve para negrito<b></b>
+
+Conteudo do texto e caracteres reservados 
+	&nbsp; coloca espaços no texto e <br>
+	caracteres reservados (<, >, ""; &)
+		< = &lt; 
+		> = &gt; 
+		& = &amp;
+   		" = &quot; 
+		' = &apos; 
+
+Anatomia do docuento HTML 
+	<!DOCTYPE html> navegadores identificar o HTML5
+	<html><html> contem o head e o Body elemento raiz (root)
+		lang="pt-br" linguagem que a página foi escrita 
+		<head></head> configurações para o navegador sobre o documento 
+			<meta> metadados do site 
+				<meta charset = "utf-8"> metadados
+				<meta name="viewport" content="width=device-width, initial-scale=1.0"> potabilidade para dispositivos móveis
+			<meta SEO: Search Engine Optimization (Motores de busca = google)
+				Charset
+				Viewport
+				Author: autor da página meta name="author" content="nome do autor">
+				Description: descrição personalixada o site para a pesquisa no google 
+					<meta name="description" content="conteudo perdonalizado">
+				Robts 	
+					<meta name="robots" content="noindex,nofollow"
+			Atributos
+			<title>Titulo do documento</title>
+			<link> inserir um link css ou favicon
+		<body></body> conteudo da página que será exibido para o usuário 
+			(p, div, entre outras) 
+
+Semantica (Significado da linguagem)
+	Elementos semânticos 
+		titulos, cabeçalho e paragráfos 
+			h1 -> apenas um por página 
+			Não precisa ter mais de 3 hs por página 
+			mais semantica mais ranqueada a pagina será( a página é mais relevante
+		listas:
+			ordenadas <ol></ol>
+			Não ordenadas <ul></li>
+			itens: <li></li>
+		Citações: Texto de outra pessoa para dar referencia 
+			<blockquote></blockquote>
+			cite: elemento de citação
+			<cite></cite> 
+			<q></q> citações curtas sem quebra de linha 
+		Codigos:tag para inserir cógigo na página 
+			<code></code> parte de códigos genérico
+			<pre></pre> Blocos de códigos com espaços e recuos
+				<pre> <code></code> </pre> 
+		Abreviações: explicar o que a palavra 
+			<abbr></abbr>
+		Detalhes de contatos: expecificar quem é o autor 
+			<address></address>
+		lista de descrição: marcar um consjunto de itens e duas descrições 
+			<dl></dl>
+				<dt></dt> termo de discrição 
+				<dd></dd> descrição 
+	Elementos Genéricos 
+		Agrupar conteúdo: (blocos) <div></div>
+		Agrupar textos: (linha) <span></span>
+
+	Hyperlinks - Elemento Ânora: <a> liga um texto ou conteudo a outro (pagina)
+		Anatomia <a href="endereço, caminho">Conteudo</a>
+		Atributos 
+			Globais 
+			Href: referencia para onde iremos, quando clicamos no link 
+				fragmento: href="#fragmento
+				url completa https://google.com.br
+				email seunome@email.com.br
+				telefone tel:+55DD999998888
+				e outros 
+
+			Download 
+			target alvo do disparo 
+				_self(padrão) mesmo página 
+				_blank	abra uma nova tab com o conteudo nõ deixando a página atual 
+	
+	Url e Caminhos dos Arquivos 
+		Url(Uniform Resource Locator: sequenvia de texto que define um endereço na web
+		Caminhos dos arquivos onde o recurso está localizado 
+
+	Como navegar pelos caminhos? 
+		Memos diretório: diretório raiz (root ou pai) ./
+		Entrando em diretórios: pasta/arquivo
+		Saindo de diretórios ../ sai do diretorios
+
+	Urls absolutos versus relativos 
+		Absoluto 
+			inclui protocolo e nome de domínio 
+			sempre apresentam o mesmo local
+		Relativo 
+			Relativo a página no momento (relativo a pasta local)
+			Apontará para lugares diferentes 
+
+Tabelas 
+	<table></table>
+		Pós 
+			Dados organizados em linhas e colunas 
+			Boa acessibilidade e leitura de dados 
+		Contra 	
+			Há pouca flexibilidade
+			Necessita de estilização com o CSS
+		Não recomemdável 
+			Criar layout com tabelas
+		Componentes 
+			 <tr></tr>linha da tabela 
+				<th></th> cabeçalho 
+				<td></td> Descrição do conteudo da linha 
+			<thead><thead> Cabeça da tabela 
+			<tbody><tbody> Conteúdo da tabela 
+			<tfoot><tfoot> rodapé da tabela 
+			<caption></caption> descreve oque a tabela faz (acessibilidade)
+			<colgroup></colgroup> <agrupa a tabela para melhor estilizá-la
+				<col> + estilo 
+				<col> span="2" + estilo 
+	Tabelas complexas 
+		rowspan="n" ocupa n linhas 
+		colspam="n" ocupa n colunas 
+		scope ajuda a acessibilidade entender a tabela 		

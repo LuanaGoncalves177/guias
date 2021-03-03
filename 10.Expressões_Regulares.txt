@@ -1,0 +1,217 @@
+Regex Expressões regulares pattern
+É um padrão para definir uma cadeia de caractere dentro de uma string 
+	\d pesquisa um digito - classe de caracteres de 0 a 9 [0-9]
+	. ponto é um meta caracter (pode representar qualquer caracter) \.(ponto na string)
+	/d{2} 2 vezes 
+		cnpj -> \d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}
+		cep -> \d{5}-\d{3}
+		ip -> \d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3} 
+		tel -> \(\d{2}\) \d{4}-\d{4}
+
+Clases de caracteres contem um parênteses com os caracteres que se procura entre elas 
+	ex:[.-] classe de caracteres ue procura o - ou . 
+	[1-36-9] classe que procura de 1 até 3 e de 6 a 9 
+	\s classe de espaço em branco 
+	
+	Podemos definir facilmente a classe de qualquer caractere com o [A-Z].
+	Conhecemos todos os quantifiers como ?, +, * e {n}.
+	\s significa whitespace e é um atalho para [ \t\r\n\f].
+	\w significa word char e é uma atalho para [A-Za-z0-9_].
+
+Quantifiers -> define quantas vezes um caracter pode aparecer {}
+	{n} n de vezes 
+	{n, } no minimo n vezes 
+	{n,m}n+1 vezes no máximo m vezes
+	+ um ou mais vezes 
+	? aparece 0 ou uma vez 
+	* significa 0 oum ais vezes
+
+Classes de Char 
+	[A-Z] letras maíscula não pega caracteres especiais como ç 
+	[a-z] letra minúscula
+	[123] 1, 2 ou 3
+	[^>]+ Quantifier pregriçoso 
+	\d - todos os dígitos [0a9]
+	\s whitespace [\t\r\s\]
+	\w wordchar [A-Za-z0-9]
+	Exemplo: 
+		hora ->\d{2}h\d{2}min\d{2}s
+		placa -> [A-Z]{3}-[0-9]{4} ou [A-Z]{3}-\d{4}
+		notas -> 7.[2-9]\s+-\s+[A-Z][a-zã]+
+	Lembre-se que \s é um atalho para espaços, tab's e que o + significa um ou mais. [7]\.[5-9]\s+-\s+\w+
+		[A-Z]{7} pega as palavras da string que contem 7 letras maúscula 
+		[A-Z]*ROT[A-Z]+ classificando por uma parte da palavra 
+	[.?+*{}] valores literais 
+	[a-z\d] classe com letras maíscula e digitos
+	[a-zA-Z][a-zA-Z0-9]{0,9} 10 caracteres, o primeiro é um char, o resto pode variar entre maiúsculo e minusculo e com digito
+
+	Regex em JavaScript
+		var DIA  = "[0123]?\d"; 
+		var _DE_ = "\s+de\s+";
+		var MES  = "[A-Za-z][a-zç]{1,8}";
+		var ANO  = "[12]\d{3}";
+	var stringRegex = DIA + _DE_ +  MES + _DE_ + ANO;
+	var objetoRegex  = new RegExp(stringRegex, 'g');
+
+Ancora é uma forma de encontrar uma posição dentro do texto selecionado paenas a palavra procurada 
+	\b word boundary ex \bPalavra\b não pode ter um word char
+	\b, o non-word-boundary: \B (B maiúsculo) \Bpor\B pesquisa no meio de uma palavra
+	^file inicio do alvo da string 
+	$ fim o alvo 
+	\.html$ final do alvo do texto 
+	() cria grupos para seperar uma parte da seleção 
+	?: Não aparecera no resultado Nom-capturing-group
+
+Grupos 
+	(\w+)gripo de word char 
+	(\w+)? grupo opcional
+	(?:\w+)non-capturing group
+	Backreference: permite referenciar um grupo em particular ao final 
+
+Expressões Regrulares em linguagem de programação
+	JavaScript 
+		var regex = /(\d\d)(\w)/g; //2 dígitos e 1 word char, dois grupos	
+		var resultado = regex.exec('11a22b33c ');
+		console.log(resultado[0]); //devolve o match inteiro: 11a
+		console.log(resultado[1]); //devolve o primeiro grupo: 11
+		console.log(resultado[2]); //devolve o segundo grupo a
+		console.log(resultado.index); //devolve a posição onde o match começo no alvo: 0
+		console.log(regex.lastIndex); //devolve a última posição do match: 3
+		console.log(regex.test('11a22b')); //true
+	Ruby
+		> regex = /(\d\d)(\w)/	
+		> alvo = "12a34b56c"
+		> resultado = regex.match("12a34b56c")
+		> resultado[0]
+		12a
+		> resultado[1]
+		12
+		> resultado.begin 0 #inicio do match inteiro
+		0
+		> resultado.begin 1 #inicio do grupo
+		0
+		> resultado.end 0 #fim do match inteiro
+		3
+		> resultado.end 1 #fim do grupo
+		2
+		> resultados = alvo.scan regex
+		=> [["12", "a"], ["34", "b"], ["56", "c"]]COP
+		> resultados[2][1]
+		=> "c"
+	PHP
+		$regexp = '~(\d\d)(\w)~';
+		$alvo = '12a34b56c';
+		$achou = preg_match($regexp, $alvo, $match);
+		> echo $match[0];
+		12a
+		> echo $match[1];
+		12
+		> echo $match[2];
+		a
+		
+		> echo $match[0];
+		12a
+		> echo $match[1];
+		12
+		> echo $match[2];
+		a
+		$achou = preg_match($regexp, $alvo, $match, PREG_OFFSET_CAPTURE);
+		...
+	Python
+		import re
+		>>> resultado = re.search(r'\d\d\w','11a22b33c')
+		>>> resultado = re.search(r'(\d\d)\w','11a22b33c')
+		>>> resultado.group()
+		11a
+		>>> resultado.group(1)
+		11
+		>>>resultado.start()
+		0 
+		>>>resultado.end()
+		3
+		>>> resultados = re.finditer(r'(\d\d)\w','11a22b33c')
+		>>> for resultado in resultados:
+		...     print "%s com grupo %s [%s,%s]" % (resultado.group(), resultado.group(1),resultado.start(), resultado.end())
+		... 
+		11a com grupo 11 [0,3]
+		22b com grupo 22 [3,6]
+		33c com grupo 33 [6,9]
+		regex = re.compile(r'(\d\d)\w')
+		resultados = regex.finditer('11a22b33c')
+		
+	C#
+		Regex regexp = new Regex(@"(\d\d)(\w)");
+		string alvo = "12a34b56c";
+		Regex regexp = new Regex(@"(\d\d)(\w)");
+
+		MatchCollection resultados = regexp.Matches(alvo);
+		foreach(Match resultado in resultados) {
+    		Console.WriteLine(resultado.Value);//imprime 12a,34b,56c
+    		Console.WriteLine(resultado.Groups[1]); //imprime 12, 34, 56 
+    		Console.WriteLine(resultado.Groups[2]); //imprime a, b, c
+    		Console.WriteLine(resultado.Index); //imprime 0, 3, 6
+    		Console.WriteLine(resultado.Length)); //imprime 3, 3, 3
+		
+using System.Text.RegularExpressions;
+namespace ExemploRegex
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string alvo = "12a34b56c";
+            Regex regexp = new Regex(@"(\d\d)(\w)");
+
+            MatchCollection resultados = regexp.Matches(alvo);
+            foreach(Match resultado in resultados)
+            {
+                Console.WriteLine(string.Format("Resultado: {0}, Grupos: {1} e {2}, Index: [{3},{4}]", 
+                    resultado.Value, 
+                    resultado.Groups[1], 
+                    resultado.Groups[2],
+                    resultado.Index,
+                    (resultado.Index+resultado.Length)));
+                    Console.WriteLine("--------------");
+            }
+        }
+    }
+}
+}
+
+	Java 
+		Pattern pattern = Pattern.compile("(\\d\\d)(\\w)");
+		Matcher matcher = pattern.matcher("11a22b33c");
+		boolean encontrou = matcher.find();
+		if(encontrou) {
+    			String match = matcher.group();
+    			String group1 = matcher.group(1);
+    			String group2 = matcher.group(2);
+
+    			int start = matcher.start();
+    			int end = matcher.end();
+
+    			System.out.printf("%s | %s |  %s [%d,%d] %n", match, group1, group2, start, end);
+		}
+public class TesteRegex {
+
+    private static Pattern pattern = Pattern.compile("(\\d\\d)(\\w)");
+
+    public static void main(String[] args) {
+
+        Matcher matcher = pattern.matcher("11a22b33c");
+        while(matcher.find()) {
+            String match = matcher.group();
+            String group1 = matcher.group(1);
+            String group2 = matcher.group(2);
+
+            int start = matcher.start();
+            int end = matcher.end();
+
+            System.out.printf("%s | %s |  %s [%d,%d] %n", match, group1, group2, start, end);
+        }
+    }
+}
+
+Material de apoio
+http://www.goulart.pro.br/cbasico/Calculo_dv.html
+http://www.cjdinfo.com.br/utilitario-calculo-digito-modulo-11

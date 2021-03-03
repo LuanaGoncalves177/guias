@@ -1,0 +1,283 @@
+Guia Java
+JVM -> Maquina virtual do Java: executa o código independente do distema operacional
+JRE é o ambiente para executar uma aplicação Java 
+JDJ é o ambiente para executar uma aplicação Java e possui várias ferramentas 
+	JDK = JRE + ferramentas desenvolvimento
+	JRE = JVM + bibliotecas
+
+Principais uso da linguagem 
+	a) Sistemas para Web (Web Sites ou Web Apps)
+	b) Sistemas puramente "Server-Side"
+	c) Aplicativos para Android
+	d) Applets que rodam no navegador
+
+Bytecode é o executável do mundo Java são portáveis, não dependem de sistemas operacionais e precisam de uma JM para ser executados 
+ 	é o código fonte 
+
+principais características da linguagem Java como:
+	orientado a objetos
+	parecido com C++
+	muitas bibliotecas e grande comunidade
+	Multiplataforma
+
+Primeiro programa em Java 
+public class Programa { // classe principal do programa 
+
+    public static void main(String[] args) { // método main 
+        System.out.println("olá mundo"); // comando de impressão no console 
+    }
+}
+
+IDEs
+Um IDE é um ambiente integrado de desenvolvimento que centraliza em um único lugar o compilador da linguagem utilizada, editor de texto, documentação e tudo que gira em torno da criação de aplicações.
+NetBeans e Intellij são outros IDEs famosos do mundo Java.
+workspace é a area de trabalho onde será armazenados os arquivos no Ecipse usa o padrão 
+
+Declarações de variaveis no Java 
+Variaveis -> é o espeço da memória que o computador reserva para guardar um número. 
++ contatena (junta vatiaveis) caso seja número faz uma soma 
+	Variaveis primitivas 
+		Inteiros (int) 
+			int idade; // criação da variavel 
+			idade = 37; // atribuição á variável 
+			int idade = 37; // em uma só linha 
+				System.out.println(idade);impressão va variável 
+		Double tipo ponto flutuante 
+			double salario = 1250.75; 
+			double divisao = 3.14 / 2;
+				System.out.println(divisao);
+	Conversões de tipos de variáveis 
+		
+		public class TestaConversao {
+
+    		public static void main(String[] args) {
+        		double salario = 1270.50;
+        		int valor = (int) salario;
+        		System.out.println(valor);
+    		}
+	}
+	Outros tipos de variáveis 
+		long numeroGrande = 32432423523L;
+		short valorPequeno = 2131;
+		byte b = 127;
+		float pontoFlutuante = 3.14f;
+		boolean bool = true; 
+	Tamanhos das variaveis 
+		TIPO	TAMANHO
+		boolean	1 bit
+		byte	1 byte
+		short	2 bytes
+		char	2 bytes
+		int	4 bytes
+		float	4 bytes
+		long	8 bytes
+		double	8 bytes
+	Char e Strings 
+		Char -> ampenas um letra 
+			char letra = 'a';
+		String -> conjunto ou array(vetor) de char 
+			String palavra = "isso é um vetor de char";
+
+	Condicionais (if/else)
+	Faz um teste e retorna true (verdadeiro) e false (falso) 
+	escopo -> espaço entre chaves de uma condição as variaveis que estiver aqui só valem para ela.
+	Sintaxe:
+		if(condição) {
+			bloco para true; 
+		} else {
+			bloco para false 
+		}
+	ifs encadeados é usado quando precisar realizar mais de uma condição 
+public class TestaCondicional {
+    public static void main(String[] args) {
+        System.out.println("testando condicionais");
+        int idade = 20;
+        if (idade >= 18) {
+            System.out.println("você tem mais de 18 anos");
+            System.out.println("seja bem vindo");
+        }
+    }
+}
+    public static void main(String[] args) {
+        System.out.println("testando condicionais");
+        int idade = 16;
+        int quantidadePessoas = 3;
+
+        if (idade >= 18) {
+            System.out.println("você tem mais de 18 anos");
+            System.out.println("seja bem vindo");
+        } else {
+            if(quantidadePessoas >= 2) {
+                System.out.println("você não tem 18, mas " + "pode entrar, pois está acompanhado");
+            } else {
+            System.out.println("infelizmente você não pode entrar");
+            }
+        }
+    }
+	Boolean Condicionais 
+	Conectivos lógicos 
+		&& -> and as duas são verdadeiras if (idade > 18 && idade < 65) { }
+		|| -> ou as duas ou uma é verdadeira         if (idade >=18 || quantidadePessoas >=2){}
+
+public class TestaCondicional2 {
+    public static void main(String[] args) {
+        System.out.println("testando condicionais");
+        int idade = 20;
+                int quantidadePessoas = 3;
+        boolean acompanhado = quantidadePessoas >= 2;
+
+                System.out.println("valor de acompanhado = " + acompanhado);
+
+        if (idade >= 18 && acompanhado) {
+            System.out.println("seja bem vindo");
+        } else {
+            System.out.println("infelizmente você não pode entrar");
+        }
+    }
+}
+	Uso das boolenas 
+
+public class TestaCondicional2 {
+
+        public static void main(String[] args){
+            System.out.println("testando condicionais");
+
+            int idade = 16;
+            int quantidadePessoas = 3;
+            boolean acompanhado = quantidadePessoas >= 2;
+
+            if (idade >=18 && acompanhado){
+
+                System.out.println("Seja bem vindo"); 
+            } else {
+                System.out.println("infelizmente voce nao pode entrar");
+        }
+
+    }
+}
+	Teste de escopos
+public class TestaEscopo {
+
+        public static void main(String[] args){
+            System.out.println("testando condicionais");
+
+            int idade = 20;
+            int quantidadePessoas = 3;    
+            boolean acompanhado;
+
+            if (quantidadePessoas >= 2) {
+                acompanhado = true;
+            }else {
+                acompanhado = false;
+            }
+
+            if (idade >=18 || acompanhado){
+
+                System.out.println("Seja bem vindo"); 
+            } else {
+                System.out.println("infelizmente voce nao pode entrar");
+        }
+
+    }
+}
+Comando Switch 
+	Faz vários testes sem precisar usar vários ifs enccadeados 
+switch (variavelASerTestada) {
+    case opção1:
+            comando(s) caso a opção 1 tenha sido escolhida
+            break;
+    case opção2:
+            comando(s) caso a opção 2 tenha sido escolhida
+            break;
+    case opção3:
+            comando(s) caso a opção 3 tenha sido escolhida
+            break;
+    default:
+            comando(s) caso nenhuma das opções anteriores tenha sido escolhida
+}
+
+	Laços 
+While -> realiza o que está dentro do  bloco enquanto a condição for atendida, caso nunca alcance a condição o laço entra em loop infinito. 
+Na expressão condicional do while é possível utilizar qualquer operador de comparação
+	(< [menor], > [maior], <= [menor ou igual], >= [maior ou igual], == [igual a] e != [diferente de]) 
+	e qualquer operador lógico (&& [and], || [ou]).
+	break; -> quebra um laço 
+
+public class TestaWhile {
+
+    public static void main(String[] args) {
+        int contador = 0;
+        while(contador <= 10) {
+            System.out.println(contador);
+            contador = contador + 1;
+        }
+        System.out.println(contador);
+
+    }
+}
+	Incremento no contador 
+		contador += 1; ou contador++;
+	Decremento no contador 
+		contador -= 1; ou contador--;
+public class TestaSomatoria {
+
+    public static void main(String[] args) {
+        int contador = 0;
+        int total = 0;
+
+        while(contador <= 10) {
+            total = total + contador;
+            contador++;
+            }
+            System.out.println(total);
+    }
+}
+	Simplificando o código 
+		total = total + contador; = total += contador;
+
+	For 
+public class TestaFor {
+
+    public static void main(String[] args) {
+        for(int contador = 0; contador <= 10; contador++) {
+            System.out.println(contador);
+        }
+    }
+}
+
+	Laços encadeados 
+public class TestaLacos {
+
+        public static void main(String[] args) {
+            for(int multiplicador = 1; multiplicador <= 10; multiplicador++) {
+                for(int contador = 0; contador <= 10; contador++) {
+                    System.out.print(multiplicador * contador);
+                    System.out.print(" ");
+                }
+                System.out.println();
+            }
+        }
+}
+
+	Break 
+public class TestaLacos2 {
+    public static void main(String[] args) {
+        for(int linha = 0; linha < 10; linha++) {
+            for(int coluna = 0; coluna <= linha; coluna++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+	Fatorial 
+class Fatorial {
+    public static void main(String[] args) {
+        int fatorial = 1;
+        for (int i = 1; i < 11; i++) {
+            fatorial *= i;
+            System.out.println("Fatorial de " + i + " = " +fatorial);
+        }
+    }
+}
