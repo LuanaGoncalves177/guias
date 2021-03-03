@@ -1,0 +1,108 @@
+Fundamentos do Css
+Introdução
+	O que significa CSS?
+		Cascading Style Sheet -> Folho de estilo em cascata 
+		Códigos para criar estilos no HTML 
+		HTML é a strutura, e o CSS é o estilo (beleza)
+		Não é uma linguagem de programação Tem sintaxe - palavra reservada)
+		É uma linguagem de Style sheet 
+Comentários -> não modifica o código
+	/**/
+
+Anatomia 
+	Selector (seletores)
+		Conecta um elemento HML com o CSS
+		Tipos
+			Global selector -> * 
+			Element/type selector -> h1, h2, p div e etc
+			ID Selectr #box, #container
+			Class selector -> .red, .m-4
+			Atribute selector, Pseudo-class, Pseudo-element e outros 
+
+	Declaration (declarações)
+	Properties (propriedades) 
+	Property Value
+Separação dos elementos do CSS em caixas 
+
+Adicionando CSS
+	Inline -> atributo `style`
+	<style> tag html que ira conter o CSS
+	<link> arquivo CSS externo 
+	@import arquivo CSS externo mais demorado
+
+A cascata (Cascading)
+	A escolha do browser de qual regra abicar, caso hava muitas regras parra um mesmo elemento 
+	O estilo é lido de cima para baixo 
+	É levado em consideração 3 fatores 
+		A origem do estilo -> inline > tag style > tag link 
+		Especificidade-> é o cálculo matemático, onde, cada tipo de seletor recebe um balor 
+			0 -> universal selector, combinators e negation pseudo-class (:not())	
+			1 -> Element type selector e psedo-elements (::Before, ::after)
+			10 -> Classes e atributes selectors ({Type-radio})
+			100 -> ID selector 
+			1000 -> Inline 
+		pode juntar mais de um selector dentro de um mesmo elemento 
+	Regra important - !important, após o valor 
+		sobrescreve todos os selectores 
+		cuidado, evite o uso 
+			não é considerado uma boa prática 
+			quebra o fluxo da cascata 
+
+At-rules Regras com Arroba 
+	Está relacionado com o comportamento do CSS
+	Começa com o sinal de "@" seguido de identificador e valor (arroba)
+	Exemplos 
+		@import -> incui um CSS externo 
+		@media -> regras condicionais para dispositivos (resposibiliade)
+		@font-face -> font externas 
+		@kyframes Anamation (aninmações)
+
+Shorthand (junção de propriedades do Css de forma resumida e mais fácil de entender 
+	Junção de propiedades 
+	resumido 
+	legível 
+	/* Css regras para backgroung */ 
+		background-color: #000; 
+		background-image: url(images/bd.gif); 
+		background-repeat: no-repeat; 
+		background-position; left top; 
+			background: #000 url(images/bd.gif) no-repeat left top; 
+	/* Css regras para font 
+		font-style: italic; 
+		font-weight: bold; 
+		font-size: 0.5em; 
+		line height: 1.2; 
+		font-family: Arial, sans-serif; 
+			font: italic bold .5em/1.2 Arial, sans-serif; 
+	
+	Não irá considerar propriedades anteriores 
+	valores não especificados irãi assumir o valor padrão 
+	geralmente, a ordem não import, mas, se houver muitas propriedades com valores semelhantes 
+	Propriedades que aceitam shorthand 
+		animation, background, border, border-botton, border-clor, border-left
+		border-radius, border-right, border-style, border-top, border-width, 
+		column-rule, columns flex, flex-flow, font, grid, grid-area, grid-column,
+		grid-row, grow-template, list-style, margin, offset, outline, overflow, padding, 
+		place-content, place-itens, place-self, text-decoration, trasition
+
+Funções 
+	nome seguido de abre e fecha parenteses 
+	recebe argumentos (valores)
+	Exemplos: 
+		@import url("http://urlaqui.com/style.css); 
+		/* Css */
+			color: rgb(255, 0, 100); 
+			width: calc(100% - 10px); 
+
+Ferramentas para desenvolvedores DevTools
+	Windows -> ctrl + F12
+
+Vendor Prefixes (Prefixo do Browser) 
+	permite que o browsers adicione `freatures` (Novidades do CSS) 
+	a fim de colocar em uso alguma novidade que vemos no CSS
+	Exemplos: 
+		/* Css*/ 
+		-webkit-background-clip: text; -> Chrome, Safari, IOS e Android 
+		-moz-background-clip: text; -> Mozila (firefox)
+		-ms-background-clip: text; -> Internnet Explorer
+		-o-background-clip: text; -> Opera 
